@@ -1,7 +1,7 @@
 ---
 title: vueRouter 设置
 date: 2020-05-07 14:28:45
-tags:
+tags: web
 ---
 
 ### 去掉hash的#

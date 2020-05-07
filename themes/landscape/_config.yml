@@ -1,9 +1,7 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
-rss: /atom.xml
-
+  首页: /
+  概况: /archives
 # Content
 excerpt_link: Read More
 fancybox: true

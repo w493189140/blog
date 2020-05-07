@@ -1,215 +1,156 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
+    <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
-  <title>vue上线前的工作 | jscheng</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.  去取项目js.mapconfig -&gt; index.js 12345678910module.exports &#x3D; &amp;#123;  dev: &amp;#123;       &#x2F;&#x2F; .........  &amp;#125;,  build: &amp;#123;        &#x2F;&#x2F;.....    productionSourceMap: true, &amp;#x">
-<meta property="og:type" content="article">
-<meta property="og:title" content="vue上线前的工作">
-<meta property="og:url" content="https://w493189140.gitee.io/blog/2020/05/07/vue-update/index.html">
-<meta property="og:site_name" content="jscheng">
-<meta property="og:description" content="1.  去取项目js.mapconfig -&gt; index.js 12345678910module.exports &#x3D; &amp;#123;  dev: &amp;#123;       &#x2F;&#x2F; .........  &amp;#125;,  build: &amp;#123;        &#x2F;&#x2F;.....    productionSourceMap: true, &amp;#x">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-07T06:25:53.000Z">
-<meta property="article:modified_time" content="2020-05-07T06:26:52.189Z">
-<meta property="article:author" content="wang cheng">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/blog/atom.xml" title="jscheng" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<link rel="stylesheet" href="/blog/styles/main.css">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/blog/" id="logo">jscheng</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/blog/">Home</a>
-        
-          <a class="main-nav-link" href="/blog/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://w493189140.gitee.io/blog"></form>
-      </div>
-    </div>
-  </div>
+    <meta name="generator" content="Hexo 4.2.0"></head>
+    <body>
+        <div class="container">
+            <header>
+<div class="main">
+<div class="title">
+    <a href="#" class="logo">JS_Cheng</a>
+</div>
+<div class="site-nav">
+    <ul id="menu" class="menu">
+    
+        <li class="menu-item text-underline">
+            <a href="/blog/">主页</a>
+        </li>
+    
+        <li class="menu-item text-underline">
+            <a href="/blog/archives">归档</a>
+        </li>
+    
+        <li class="menu-item text-underline">
+            <a href="/blog/about/">关于</a>
+        </li>
+            
+    </ul>
+</div>
+</div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-vue-update" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2020/05/07/vue-update/" class="article-date">
-  <time datetime="2020-05-07T06:25:53.000Z" itemprop="datePublished">2020-05-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      vue上线前的工作
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+            <main class="main">
+                <section class="posts clearfix">
+<div class="post-wrapper">
+    <article class="post article-entry">
+    <div class="post-title">
+        vue上线前的工作
+    </div>
+    <p class="sub">5月 07 2020</p>
+    <div class="post-content">
         <h3 id="1-去取项目js-map"><a href="#1-去取项目js-map" class="headerlink" title="1.  去取项目js.map"></a>1.  去取项目js.map</h3><p>config -&gt; index.js</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  dev: &#123;</span><br><span class="line">       &#x2F;&#x2F; .........</span><br><span class="line">  &#125;,</span><br><span class="line">  build: &#123;</span><br><span class="line">        &#x2F;&#x2F;.....</span><br><span class="line">    productionSourceMap: true, &#x2F;&#x2F;改为false</span><br><span class="line">        &#x2F;&#x2F;.....</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-去除console-log"><a href="#2-去除console-log" class="headerlink" title="2. 去除console.log()"></a>2. 去除console.log()</h3><p> build -&gt; webpack.prod.conf -&gt;  plugins</p>
 <p> 添加  drop_debugger: true,<br>          drop_console: true</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">   &#x2F;&#x2F; http:&#x2F;&#x2F;vuejs.github.io&#x2F;vue-loader&#x2F;en&#x2F;workflow&#x2F;production.html</span><br><span class="line">   new webpack.DefinePlugin(&#123;</span><br><span class="line">     &#39;process.env&#39;: env</span><br><span class="line">   &#125;),</span><br><span class="line">   new UglifyJsPlugin(&#123;</span><br><span class="line">     uglifyOptions: &#123;</span><br><span class="line">       compress: &#123;</span><br><span class="line">         warnings: false,</span><br><span class="line">         &#x2F;&#x2F;todo 此处添加</span><br><span class="line">         drop_debugger: true,</span><br><span class="line">         drop_console: true</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     sourceMap: config.build.productionSourceMap,</span><br><span class="line">     parallel: true</span><br><span class="line">   &#125;),</span><br></pre></td></tr></table></figure>
 
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="https://w493189140.gitee.io/blog/2020/05/07/vue-update/" data-id="ck9we4ub60002wsv60uzwfc65" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/blog/2020/05/07/vue-router/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          vueRouter 设置
-        
-      </div>
-    </a>
-  
-  
-    <a href="/blog/2020/05/07/home/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">vue webpack 打包后animation冲突</div>
-    </a>
-  
-</nav>
+    </article>
+</div>
 
-  
-</article>
+    <div class="_toc">
+        <strong class="toc-title">
+        Contents
+        </strong>
+        <div class="toc-content">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-去取项目js-map"><span class="toc-text">1.  去取项目js.map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-去除console-log"><span class="toc-text">2. 去除console.log()</span></a></li></ol>
+        </div>
+    </div>
 
 </section>
+
+
+    <nav class="post-nav">
         
-          <aside id="sidebar">
-  
-    
+            <div class="page-tags">
+                
+                    <a href="/blog/tags/web/">web</a>
+                
+            </div>
+        
+    </nav>
 
-  
-    
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/05/">五月 2020</a></li></ul>
-    </div>
+
+    <nav class="paginator clearfix">
+        
+            <a class="prev" href="/blog/2020/05/07/vue-router/">
+                <i class="iconfont icon-left"></i>
+                <span class="prev-text">vueRouter 设置</span>
+            </a>
+        
+        
+            <a class="next" href="/blog/2020/05/07/home/">
+                
+                <span class="prev-text">vue webpack 打包后animation冲突</span>
+                <i class="iconfont icon-right"></i>
+            </a>
+        
+    </nav>
+
+
+            </main>
+            <div class="copyright">
+  <div class="text">Powered By
+    <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> | Theme <a href="https://github.com/zjx137/hexo-theme-Tsu" target="_blank" rel="noopener">Tsu</a> &copy 2019
   </div>
+</div>
 
-
-  
+        </div>
+    <div class="back-to-top" id="back-to-top">
+            <i class="iconfont icon-up"></i>
+    </div>
+        
+    </body>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/blog/2020/05/07/vue-router/">vueRouter 设置</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2020/05/07/vue-update/">vue上线前的工作</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2020/05/07/home/">vue webpack 打包后animation冲突</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+<script src="/blog/js/jquery-3.3.1.min.js"></script>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 wang cheng<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/blog/" class="mobile-nav-link">Home</a>
-  
-    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
+<script src="/blog/js/back-to-top.js"></script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+<script src="/blog/js/scroll.js"></script>
 
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
-  
-<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-
-  
-<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/blog/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
 </html>

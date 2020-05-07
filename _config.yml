@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: jscheng
+title: JS_Cheng
 subtitle: ''
-description: ''
-keywords:
+description: 'jscheng 的博客'
+keywords: 'jscheng,博客,阳光喔,阳光语文'
 author: wang cheng
 language: zh-CN
 timezone: ''
@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-Tsu
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

@@ -1,7 +1,7 @@
 ---
 title: vue webpack 打包后animation冲突
 date: 2020-05-07 14:22:13
-tags:
+tags: pc
 ---
 ### 动画冲突
 ##### 原因：
