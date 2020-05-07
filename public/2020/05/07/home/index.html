@@ -5,17 +5,17 @@
   
 
   
-  <title>首页 | jscheng</title>
+  <title>vue webpack 打包后animation冲突 | jscheng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="哈哈哈哈哈">
+  <meta name="description" content="动画冲突原因：@keyframes的名称被缩写成了a造成冲突 解决办法配置文件发现使用了postcss的cssnano插件压缩css，压缩过程中使用了postcss-reduce-idents插件对自定义的标识符重命名。 修改配置文件postcss.config.js，plugins属性中增加 123&#39;postcss-reduce-idents&#39;: &amp;#123;    keyfra">
 <meta property="og:type" content="article">
-<meta property="og:title" content="首页">
+<meta property="og:title" content="vue webpack 打包后animation冲突">
 <meta property="og:url" content="https://w493189140.gitee.io/blog/2020/05/07/home/index.html">
 <meta property="og:site_name" content="jscheng">
-<meta property="og:description" content="哈哈哈哈哈">
+<meta property="og:description" content="动画冲突原因：@keyframes的名称被缩写成了a造成冲突 解决办法配置文件发现使用了postcss的cssnano插件压缩css，压缩过程中使用了postcss-reduce-idents插件对自定义的标识符重命名。 修改配置文件postcss.config.js，plugins属性中增加 123&#39;postcss-reduce-idents&#39;: &amp;#123;    keyfra">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-07T06:22:13.000Z">
-<meta property="article:modified_time" content="2020-05-07T06:22:35.801Z">
+<meta property="article:modified_time" content="2020-05-07T06:45:41.891Z">
 <meta property="article:author" content="wang cheng">
 <meta name="twitter:card" content="summary">
   
@@ -80,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      首页
+      vue webpack 打包后animation冲突
     </h1>
   
 
@@ -88,7 +88,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>哈哈哈哈哈</p>
+        <h3 id="动画冲突"><a href="#动画冲突" class="headerlink" title="动画冲突"></a>动画冲突</h3><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>@keyframes的名称被缩写成了a造成冲突</p>
+<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>配置文件发现使用了postcss的cssnano插件压缩css，压缩过程中使用了postcss-reduce-idents插件对自定义的标识符重命名。</p>
+<p>修改配置文件postcss.config.js，plugins属性中增加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#39;postcss-reduce-idents&#39;: &#123;</span><br><span class="line">    keyframes: false,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>禁止插件对自定义动画名称的重命名。</p>
 
       
     </div>
@@ -154,7 +159,7 @@
           </li>
         
           <li>
-            <a href="/blog/2020/05/07/home/">首页</a>
+            <a href="/blog/2020/05/07/home/">vue webpack 打包后animation冲突</a>
           </li>
         
       </ul>

@@ -185,7 +185,7 @@ alias  别名 给路由起个名</code></pre><h2 id="404页面"><a href="#404页
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2020/05/07/home/">首页</a>
+      <a class="article-title" href="/blog/2020/05/07/home/">vue webpack 打包后animation冲突</a>
     </h1>
   
 
@@ -193,7 +193,12 @@ alias  别名 给路由起个名</code></pre><h2 id="404页面"><a href="#404页
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>哈哈哈哈哈</p>
+        <h3 id="动画冲突"><a href="#动画冲突" class="headerlink" title="动画冲突"></a>动画冲突</h3><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>@keyframes的名称被缩写成了a造成冲突</p>
+<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>配置文件发现使用了postcss的cssnano插件压缩css，压缩过程中使用了postcss-reduce-idents插件对自定义的标识符重命名。</p>
+<p>修改配置文件postcss.config.js，plugins属性中增加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#39;postcss-reduce-idents&#39;: &#123;</span><br><span class="line">    keyframes: false,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>禁止插件对自定义动画名称的重命名。</p>
 
       
     </div>
@@ -247,7 +252,7 @@ alias  别名 给路由起个名</code></pre><h2 id="404页面"><a href="#404页
           </li>
         
           <li>
-            <a href="/blog/2020/05/07/home/">首页</a>
+            <a href="/blog/2020/05/07/home/">vue webpack 打包后animation冲突</a>
           </li>
         
       </ul>
