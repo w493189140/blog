@@ -1,8 +1,9 @@
 ---
 title: reat 初始化项目配置 @/、less、vw
 date: 2020-05-09 14:01:13
-tags: ract
+tags: react
 ---
+
 ## @/
 ###### webpack.config.js
 resolve ===> alias ===> 添加 '@':paths.appSrc
