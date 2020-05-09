@@ -40,6 +40,49 @@
     
         <article class="post article-entry">
             <div class="post-title">
+                <a class="post-title-link text-underline" href="/blog/2020/05/09/electron-win7-error/">electron打包应用在win7无法启动解决方案</a>
+            </div>
+            <p class="sub">5月 09 2020</p>
+            <div class="post-content">
+                <h2 id="问题-1：win7兼容"><a href="#问题-1：win7兼容" class="headerlink" title="问题 1：win7兼容"></a>问题 1：win7兼容</h2><p>electron打包后的app，在win7的某些电脑（非管理员的情况下有一定概率出现）双击软件安装后生成的快捷方式，然后啥事情也没有发生，但是打开控制台可以看到应用的进程启动一下然后快速被关掉。<br> 解决方法：</p>
+<h5 id="1-方法一："><a href="#1-方法一：" class="headerlink" title="1. 方法一："></a>1. 方法一：</h5><pre><code>软件的兼容性问题，可能是有些电脑的系统比较古老，和electron有兼容性问题，更新electron版本比较容易有其他问题，
+解决方法是以兼容模式启动运行软件。步骤如下：
+第一步，把鼠标放在快捷方式的图标上，右击选择--属性--选项
+第二步， 点击兼容性，把-- 以兼容模式运行这个程序--打勾，然后下面下拉选择你当前系统的类型。然后点击确定，最后重开软件。</code></pre><h5 id="2-方法二："><a href="#2-方法二：" class="headerlink" title="2. 方法二："></a>2. 方法二：</h5><pre><code>卸载重新安装，注意用管理员模式安装，同时关闭杀毒软件。有些情况下因为杀毒软件的原因把软件的某些文件删掉造成无法启动，
+用管理员模式启动软件；</code></pre><br/>
+<br/>
+
+<hr>
+<br/>
+<br/>
+
+<h2 id="问题2：win7上打不开，后台进程中有"><a href="#问题2：win7上打不开，后台进程中有" class="headerlink" title="问题2：win7上打不开，后台进程中有"></a>问题2：win7上打不开，后台进程中有</h2><p>electron打包文件，在某些windows7上打不开，后台进程中有，只是页面不显示<br>研究发现，页面打不开，进程中有，是因为这个程序的优先级的问题，如果把程序的优先级调高，那就可以打开。<br>所以想到了用bat脚本来启动程序，这样就可以用高优先级运行程序。其实我一直想找一种办法就是在代码里控制windows的注册表，<br>从注册表中来调高程序的优先级。</p>
+<p>下面是bat文件的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start &#x2F;HIGH &quot;.\阳光语文 x.x.x.exe&quot;</span><br></pre></td></tr></table></figure>
+
+<pre><code>解释：
+start       // 开启
+/HIGH       //高优先级，这是windows上的，还有其他的级别，可以百度哈
+“.”         // 相对路径，用来找到你想启动的程序
+****.exe    // 这是你要启动的程序的exe文件
+写完后，把文件的后缀改为.bat，这样双击就能运行了</code></pre><br/>
+<br/>
+
+<h2 id="问题3：在win7下白屏"><a href="#问题3：在win7下白屏" class="headerlink" title="问题3：在win7下白屏"></a>问题3：在win7下白屏</h2><p>electron桌面客户端软件，部分用户安装以后会出现白屏问题，经过测试发现，其实软件根本没有完全启动，但是打印log却又完整的执行了页面的渲染，但是软件完全白屏。</p>
+<p>查看是win7极限精简版。</p>
+<p>解决：</p>
+<pre><code>发现 win7系统的 .NET Framework 可能版本超级过低 然后安装了最新版的.NET Framework（用于Windows的新托管代码编程模型）。</code></pre><p><a href="https://dotnet.microsoft.com/download/dotnet-framework" target="_blank" rel="noopener">.NET Framework 微软官方下载链接</a></p>
+<br/>
+<br/>
+
+<h2 id="问题4：在win7点击electron缺少-dll-文件"><a href="#问题4：在win7点击electron缺少-dll-文件" class="headerlink" title="问题4：在win7点击electron缺少 *.dll 文件"></a>问题4：在win7点击electron缺少 *.dll 文件</h2><p>1.下载DirectX修复工具并解压。<br>2.根据自己的系统，点击“DirectX Repair”文件，或者点击“DirectX_Repair_win8”，点击“检测并修复”选项。<br>3.等待修复完成，然后点击“确定”和“退出”，再重启电脑即可。</p>
+<p><a href="http://forspeed.onlinedown.net/down/120082DirectX_Repair-V3_9.7z" target="_blank" rel="noopener">DirectX</a><br>失效时点击下边下载<br><a href="https://www.onlinedown.net/soft/120082.htm" target="_blank" rel="noopener">DirectX下载链接</a><br>请选择本地下载 ===&gt;普通下载地址</p>
+
+            </div>
+        </article>
+    
+        <article class="post article-entry">
+            <div class="post-title">
                 <a class="post-title-link text-underline" href="/blog/2020/05/07/vue-router/">vueRouter 设置</a>
             </div>
             <p class="sub">5月 07 2020</p>
@@ -127,7 +170,7 @@ alias  别名 给路由起个名</code></pre><h2 id="404页面"><a href="#404页
         </div>
     <div class="tags">
     <h3 class="tags-title">Tags</h3>
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/" rel="tag">web</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/pc/" rel="tag">pc</a><span class="tag-list-count">1</span></li></ul>
+    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/" rel="tag">web</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/pc/" rel="tag">pc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/electron-win7/" rel="tag">electron-win7</a><span class="tag-list-count">1</span></li></ul>
 </div>
     </div>
 </div>

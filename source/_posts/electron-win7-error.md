@@ -5,7 +5,7 @@ tags: electron-win7
 ---
 ## 问题 1：win7兼容
 electron打包后的app，在win7的某些电脑（非管理员的情况下有一定概率出现）双击软件安装后生成的快捷方式，然后啥事情也没有发生，但是打开控制台可以看到应用的进程启动一下然后快速被关掉。
-### 解决方法：
+ 解决方法：
 ##### 1. 方法一：
         软件的兼容性问题，可能是有些电脑的系统比较古老，和electron有兼容性问题，更新electron版本比较容易有其他问题，
         解决方法是以兼容模式启动运行软件。步骤如下：
@@ -21,7 +21,7 @@ electron打包后的app，在win7的某些电脑（非管理员的情况下有�
 <br/>
 <br/>
 
-## 问题2：windows7上打不开，后台进程中有
+## 问题2：win7上打不开，后台进程中有
 
 electron打包文件，在某些windows7上打不开，后台进程中有，只是页面不显示
 研究发现，页面打不开，进程中有，是因为这个程序的优先级的问题，如果把程序的优先级调高，那就可以打开。
@@ -29,7 +29,6 @@ electron打包文件，在某些windows7上打不开，后台进程中有，只�
 从注册表中来调高程序的优先级。
 
 下面是bat文件的代码
----
 
 ```
     start /HIGH ".\阳光语文 x.x.x.exe"
@@ -41,3 +40,30 @@ electron打包文件，在某些windows7上打不开，后台进程中有，只�
         “.”         // 相对路径，用来找到你想启动的程序
         ****.exe    // 这是你要启动的程序的exe文件
         写完后，把文件的后缀改为.bat，这样双击就能运行了
+
+<br/>
+<br/>
+
+## 问题3：在win7下白屏
+
+electron桌面客户端软件，部分用户安装以后会出现白屏问题，经过测试发现，其实软件根本没有完全启动，但是打印log却又完整的执行了页面的渲染，但是软件完全白屏。
+
+查看是win7极限精简版。
+
+解决：
+
+        发现 win7系统的 .NET Framework 可能版本超级过低 然后安装了最新版的.NET Framework（用于Windows的新托管代码编程模型）。
+[.NET Framework 微软官方下载链接](https://dotnet.microsoft.com/download/dotnet-framework)
+
+<br/>
+<br/>
+
+##  问题4：在win7点击electron缺少 *.dll 文件
+1.下载DirectX修复工具并解压。
+2.根据自己的系统，点击“DirectX Repair”文件，或者点击“DirectX_Repair_win8”，点击“检测并修复”选项。
+3.等待修复完成，然后点击“确定”和“退出”，再重启电脑即可。
+
+[DirectX](http://forspeed.onlinedown.net/down/120082DirectX_Repair-V3_9.7z)
+失效时点击下边下载
+[DirectX下载链接](https://www.onlinedown.net/soft/120082.htm)
+请选择本地下载 ===>普通下载地址

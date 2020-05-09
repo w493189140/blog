@@ -35,32 +35,43 @@
 </div>
 </header>
             <main class="main">
-                <section class="posts clearfix">
-<div class="post-wrapper">
-    <article class="post article-entry">
-    <div class="post-title">
-        vue webpack 打包后animation冲突
-    </div>
-    <p class="sub">5月 07 2020</p>
-    <div class="post-content">
-        <h3 id="动画冲突"><a href="#动画冲突" class="headerlink" title="动画冲突"></a>动画冲突</h3><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>@keyframes的名称被缩写成了a造成冲突</p>
-<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>配置文件发现使用了postcss的cssnano插件压缩css，压缩过程中使用了postcss-reduce-idents插件对自定义的标识符重命名。</p>
-<p>修改配置文件postcss.config.js，plugins属性中增加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#39;postcss-reduce-idents&#39;: &#123;</span><br><span class="line">    keyframes: false,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+                <section class="archive">
 
-<p>禁止插件对自定义动画名称的重命名。</p>
 
-    </div>
-    </article>
-</div>
+  <div class="archive-title tag">
+    <h2 class="archive-name">electron-win7</h2>
+  </div>
 
-    <div class="_toc">
-        <!--<strong class="toc-title">-->
-        <!--Contents-->
-        <!--</strong>-->
-        <div class="toc-content">
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#动画冲突"><span class="toc-text">动画冲突</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#原因："><span class="toc-text">原因：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#解决办法"><span class="toc-text">解决办法</span></a></li></ol></li></ol></li></ol>
-        </div>
+  <div class="archive-title category">
+    <h2 class="archive-name"></h2>
+  </div>
+
+
+
+    <div class="post-archive">
+        
+        
+                       
+                
+                    
+                    
+                                            
+                    
+                    
+                
+                <div class="collect-item">
+                
+                
+                    <div class="time">2020-05-09</div>
+                    <a href="/blog/2020/05/09/electron-win7-error/" class="title">electron打包应用在win7无法启动解决方案</a>
+                
+                </div>
+                
+                
+
+
+        
+
     </div>
 
 </section>
@@ -68,25 +79,8 @@
 
     <nav class="post-nav">
         
-            <div class="page-tags">
-                
-                    <a href="/blog/tags/pc/">pc</a>
-                
-            </div>
-        
     </nav>
 
-
-
-    <nav class="paginator clearfix">
-        
-            <a class="prev" href="/blog/2020/05/07/vue-update/">
-                <i class="iconfont icon-left"></i>
-                <span class="prev-text">vue上线前的工作</span>
-            </a>
-        
-        
-    </nav>
 
 
             </main>
