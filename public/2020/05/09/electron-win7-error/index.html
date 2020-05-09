@@ -70,10 +70,11 @@ start       // 开启
 写完后，把文件的后缀改为.bat，这样双击就能运行了</code></pre><br/>
 <br/>
 
-<h2 id="问题3：在win7下白屏"><a href="#问题3：在win7下白屏" class="headerlink" title="问题3：在win7下白屏"></a>问题3：在win7下白屏</h2><p>electron桌面客户端软件，部分用户安装以后会出现白屏问题，经过测试发现，其实软件根本没有完全启动，但是打印log却又完整的执行了页面的渲染，但是软件完全白屏。</p>
+<h2 id="问题3：在win7下白屏"><a href="#问题3：在win7下白屏" class="headerlink" title="问题3：在win7下白屏"></a>问题3：在win7下白屏</h2><p>electron桌面客户端软件，部分用户安装以后会出现白屏问题，经过测试发现，<br>其实软件根本没有完全启动，但是打印log却又完整的执行了页面的渲染，但是软件完全白屏。</p>
 <p>查看是win7极限精简版。</p>
 <p>解决：</p>
-<pre><code>发现 win7系统的 .NET Framework 可能版本超级过低 然后安装了最新版的.NET Framework（用于Windows的新托管代码编程模型）。</code></pre><p><a href="https://dotnet.microsoft.com/download/dotnet-framework" target="_blank" rel="noopener">.NET Framework 微软官方下载链接</a></p>
+<pre><code>发现 win7系统的 .NET Framework 可能版本超级过低
+然后安装了最新版的.NET Framework（用于Windows的新托管代码编程模型）。</code></pre><p><a href="https://dotnet.microsoft.com/download/dotnet-framework" target="_blank" rel="noopener">.NET Framework 微软官方下载链接</a></p>
 <br/>
 <br/>
 

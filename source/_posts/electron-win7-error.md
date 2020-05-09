@@ -49,13 +49,15 @@ electron打包文件，在某些windows7上打不开，后台进程中有，只�
 
 ## 问题3：在win7下白屏
 
-electron桌面客户端软件，部分用户安装以后会出现白屏问题，经过测试发现，其实软件根本没有完全启动，但是打印log却又完整的执行了页面的渲染，但是软件完全白屏。
+electron桌面客户端软件，部分用户安装以后会出现白屏问题，经过测试发现，
+其实软件根本没有完全启动，但是打印log却又完整的执行了页面的渲染，但是软件完全白屏。
 
 查看是win7极限精简版。
 
 解决：
 
-        发现 win7系统的 .NET Framework 可能版本超级过低 然后安装了最新版的.NET Framework（用于Windows的新托管代码编程模型）。
+        发现 win7系统的 .NET Framework 可能版本超级过低
+        然后安装了最新版的.NET Framework（用于Windows的新托管代码编程模型）。
 [.NET Framework 微软官方下载链接](https://dotnet.microsoft.com/download/dotnet-framework)
 
 <br/>
