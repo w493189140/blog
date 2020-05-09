@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title> vue  vw 配置</title>
+<meta name="keywords" content="jscheng,js,JS_Cheng,js_cheng,blog">
+<meta name="description" content="jscheng 阳光语文">
+
+<link rel="stylesheet" href="/blog/styles/main.css">
+
+    <meta name="generator" content="Hexo 4.2.0"></head>
+    <body>
+        <div class="container">
+            <header>
+<div class="main">
+<div class="title">
+    <a href="#" class="logo">JS_Cheng</a>
+</div>
+<div class="site-nav">
+    <ul id="menu" class="menu">
+    
+        <li class="menu-item text-underline">
+            <a href="/blog/">主页</a>
+        </li>
+    
+        <li class="menu-item text-underline">
+            <a href="/blog/archives">归档</a>
+        </li>
+    
+        <li class="menu-item text-underline">
+            <a href="/blog/about/">关于</a>
+        </li>
+            
+    </ul>
+</div>
+</div>
+</header>
+            <main class="main">
+                <section class="posts clearfix">
+<div class="post-wrapper">
+    <article class="post article-entry">
+    <div class="post-title">
+        vue  vw 配置
+    </div>
+    <p class="sub">5月 09 2020</p>
+    <div class="post-content">
+        <h2 id="vw-配置"><a href="#vw-配置" class="headerlink" title="vw 配置"></a>vw 配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i postcss-import postcss-url autoprefixer less less-loader postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext cssnano postcss-viewport-units -S</span><br></pre></td></tr></table></figure>
+<p>.postcssrc.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    &quot;plugins&quot;: &#123;</span><br><span class="line">    &quot;postcss-import&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-url&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-aspect-ratio-mini&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-write-svg&quot;: &#123; utf8: false &#125;,</span><br><span class="line">    &quot;postcss-cssnext&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-px-to-viewport&quot;: &#123;</span><br><span class="line">        viewportWidth: 750,</span><br><span class="line">        viewportHeight: 1334,</span><br><span class="line">        unitPrecision: 3,</span><br><span class="line">        viewportUnit: &#39;vw&#39;,</span><br><span class="line">        selectorBlackList: [&#39;.ignore&#39;, &#39;.hairlines&#39;],</span><br><span class="line">        minPixelValue: 1,</span><br><span class="line">        mediaQuery: false</span><br><span class="line">         &#125;,</span><br><span class="line">    &quot;postcss-viewport-units&quot;:&#123;</span><br><span class="line">    &lt;!--图片出现样式问题  ios不显示 还要加上 img&#123; content: normal !important;&#125;--&gt;</span><br><span class="line"></span><br><span class="line">      filterRule: rule &#x3D;&gt; rule.selector.indexOf(&#39;::after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;::before&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:before&#39;) &#x3D;&#x3D;&#x3D; -1</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;cssnano&quot;: &#123;</span><br><span class="line">        preset: &quot;advanced&quot;,</span><br><span class="line">        autoprefixer: false,</span><br><span class="line">        &quot;postcss-zindex&quot;: false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="less-配置"><a href="#less-配置" class="headerlink" title="less 配置"></a>less 配置</h2><p>webpack.base.conf.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   test: &#x2F;\.less$&#x2F;,</span><br><span class="line">   loader: &quot;style-loader!css-loader!less-loader&quot;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<p> 下载依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; cnpm i less less-loader -S</span><br></pre></td></tr></table></figure>
+
+<hr/><hr/><hr/>
+
+<h1 id="vue-cli-3-0"><a href="#vue-cli-3-0" class="headerlink" title="vue-cli 3.0"></a>vue-cli 3.0</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i postcss-px-to-viewport -save -dev</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;postcss&quot;: &#123;</span><br><span class="line">        &quot;plugins&quot;: &#123;</span><br><span class="line">            &quot;autoprefixer&quot;: &#123;&#125;,</span><br><span class="line">            &quot;postcss-px-to-viewport&quot;: &#123;</span><br><span class="line">                &quot;viewportWidth&quot;: 750,</span><br><span class="line">                &quot;minPixelValue&quot;: 1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+    </article>
+</div>
+
+    <div class="_toc">
+        <!--<strong class="toc-title">-->
+        <!--Contents-->
+        <!--</strong>-->
+        <div class="toc-content">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#vw-配置"><span class="toc-text">vw 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#less-配置"><span class="toc-text">less 配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vue-cli-3-0"><span class="toc-text">vue-cli 3.0</span></a>
+        </div>
+    </div>
+
+</section>
+
+
+    <nav class="post-nav">
+        
+            <div class="page-tags">
+                
+                    <a href="/blog/tags/vue/">vue</a>
+                
+            </div>
+        
+    </nav>
+
+
+
+    <nav class="paginator clearfix">
+        
+            <a class="prev" href="/blog/2020/05/09/react-cli/">
+                <i class="iconfont icon-left"></i>
+                <span class="prev-text">reat 初始化项目配置 @/、less、vw</span>
+            </a>
+        
+        
+            <a class="next" href="/blog/2020/05/09/git/">
+                
+                <span class="prev-text">git基本使用</span>
+                <i class="iconfont icon-right"></i>
+            </a>
+        
+    </nav>
+
+
+
+            </main>
+            <div class="copyright">
+  <div class="text">Powered By Hexo | Theme Tsu &copy 2020 jscheng</div>
+</div>
+
+        </div>
+    <div class="back-to-top" id="back-to-top">
+            <i class="iconfont icon-up"></i>
+    </div>
+        
+    </body>
+    
+<script src="/blog/js/jquery-3.3.1.min.js"></script>
+
+    
+<script src="/blog/js/back-to-top.js"></script>
+
+    
+<script src="/blog/js/scroll.js"></script>
+
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</html>

@@ -42,6 +42,218 @@
     
         <article class="post article-entry">
             <div class="post-title">
+                <a class="post-title-link text-underline" href="/blog/2020/05/09/react-cli/">reat 初始化项目配置 @/、less、vw</a>
+            </div>
+            <p class="sub">5月 09 2020</p>
+            <div class="post-content">
+                <h2 id=""><a href="#" class="headerlink" title="@/"></a>@/</h2><h6 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h6><p>resolve ===&gt; alias ===&gt; 添加 ‘@’:paths.appSrc</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alias: &#123;</span><br><span class="line">       &#x2F;&#x2F; Support React Native Web</span><br><span class="line">       &#x2F;&#x2F; https:&#x2F;&#x2F;www.smashingmagazine.com&#x2F;2016&#x2F;08&#x2F;a-glimpse-into-the-future-with-react-native-for-web&#x2F;</span><br><span class="line">       &#39;react-native&#39;: &#39;react-native-web&#39;,</span><br><span class="line">       &#x2F;&#x2F; Allows for better profiling with ReactDevTools</span><br><span class="line">       ...(isEnvProductionProfile &amp;&amp; &#123;</span><br><span class="line">         &#39;react-dom$&#39;: &#39;react-dom&#x2F;profiling&#39;,</span><br><span class="line">         &#39;scheduler&#x2F;tracing&#39;: &#39;scheduler&#x2F;tracing-profiling&#39;,</span><br><span class="line">       &#125;),</span><br><span class="line">       ...(modules.webpackAliases || &#123;&#125;),</span><br><span class="line">       &#x2F;&#x2F;todo &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;start&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">       &#39;@&#39;:paths.appSrc</span><br><span class="line">       &#x2F;&#x2F;todo &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;end&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">     &#125;,</span><br></pre></td></tr></table></figure>
+<h1 id="less"><a href="#less" class="headerlink" title="less"></a>less</h1><h6 id="装依赖"><a href="#装依赖" class="headerlink" title="装依赖"></a>装依赖</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add less less-loader -S</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i less less-loader -S</span><br></pre></td></tr></table></figure>
+<h6 id="webpack-config-js-1"><a href="#webpack-config-js-1" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 添加 style files regexes</span><br><span class="line">const lessRegex &#x3D; &#x2F;\.(less)$&#x2F;;</span><br><span class="line">const lessModuleRegex &#x3D; &#x2F;\.module\.(less)$&#x2F;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;css rules  &#x3D;&#x3D;&#x3D;&#x3D;&gt; sass 后边加上 或更改 sass</span><br><span class="line"> &#123;</span><br><span class="line">      test: lessRegex,</span><br><span class="line">      exclude: lessModuleRegex,</span><br><span class="line">      use: getStyleLoaders(</span><br><span class="line">        &#123;</span><br><span class="line">          importLoaders: 2,</span><br><span class="line">          sourceMap: isEnvProduction &amp;&amp; shouldUseSourceMap,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#39;less-loader&#39;</span><br><span class="line">      ),</span><br><span class="line">      &#x2F;&#x2F; Don&#39;t consider CSS imports dead code even if the</span><br><span class="line">      &#x2F;&#x2F; containing package claims to have no side effects.</span><br><span class="line">      &#x2F;&#x2F; Remove this when webpack adds a warning or an error for this.</span><br><span class="line">      &#x2F;&#x2F; See https:&#x2F;&#x2F;github.com&#x2F;webpack&#x2F;webpack&#x2F;issues&#x2F;6571</span><br><span class="line">      sideEffects: true,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<h1 id="Autoprefixer-px2vw"><a href="#Autoprefixer-px2vw" class="headerlink" title="Autoprefixer px2vw"></a>Autoprefixer px2vw</h1><h6 id="装依赖-1"><a href="#装依赖-1" class="headerlink" title="装依赖"></a>装依赖</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add  postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext postcss-viewport-units cssnano autoprefixer -D</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i --save postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext postcss-viewport-units cssnano autoprefixer</span><br></pre></td></tr></table></figure>
+<h6 id="webpack-config-js-2"><a href="#webpack-config-js-2" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;引入新添加</span><br><span class="line">const Autoprefixer &#x3D; require(&#39;autoprefixer&#39;);</span><br><span class="line">const postcssAspectRatioMini &#x3D; require(&#39;postcss-aspect-ratio-mini&#39;);</span><br><span class="line">const postcssPxToViewport &#x3D; require(&#39;postcss-px-to-viewport&#39;);</span><br><span class="line">const postcssWriteSvg &#x3D; require(&#39;postcss-write-svg&#39;);</span><br><span class="line">const postcssCssnext &#x3D; require(&#39;postcss-cssnext&#39;);</span><br><span class="line">const postcssViewportUnits &#x3D; require(&#39;postcss-viewport-units&#39;);</span><br><span class="line">const cssnano &#x3D; require(&#39;cssnano&#39;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;getStyleLoaders &#x3D;&#x3D;&#x3D;&gt; plugins</span><br><span class="line">plugins: () &#x3D;&gt; [</span><br><span class="line">        require(&#39;postcss-flexbugs-fixes&#39;),</span><br><span class="line">        &#x2F;&#x2F; add&#x3D;&#x3D;&#x3D;start&#x3D;&#x3D;&#x3D;</span><br><span class="line">        Autoprefixer(&#123;</span><br><span class="line">            overrideBrowserslist: [</span><br><span class="line">                &quot;Android 4.1&quot;,</span><br><span class="line">                &quot;iOS 7.1&quot;,</span><br><span class="line">                &quot;Chrome &gt; 31&quot;,</span><br><span class="line">                &quot;ff &gt; 31&quot;,</span><br><span class="line">                &quot;ie &gt;&#x3D; 8&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;end&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">        require(&#39;postcss-preset-env&#39;)(&#123;</span><br><span class="line">            autoprefixer: &#123;</span><br><span class="line">                flexbox: &#39;no-2009&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            stage: 3,</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; add &#x3D;&#x3D;&#x3D;&#x3D;start &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">        postcssAspectRatioMini(&#123;&#125;),</span><br><span class="line">        postcssPxToViewport(&#123;</span><br><span class="line">            viewportWidth: 375, &#x2F;&#x2F; (Number) The width of the viewport.</span><br><span class="line">            viewportHeight: 667, &#x2F;&#x2F; (Number) The height of the viewport.</span><br><span class="line">            unitPrecision: 3, &#x2F;&#x2F; (Number) The decimal numbers to allow the REM units to grow to.</span><br><span class="line">            viewportUnit: &#39;vw&#39;, &#x2F;&#x2F; (String) Expected units.</span><br><span class="line">            selectorBlackList: [&#39;.ignore&#39;, &#39;.hairlines&#39;, &#39;.list-row-bottom-line&#39;, &#39;.list-row-top-line&#39;], &#x2F;&#x2F; (Array) The selectors to ignore and leave as px.</span><br><span class="line">            minPixelValue: 1, &#x2F;&#x2F; (Number) Set the minimum pixel value to replace.</span><br><span class="line">            mediaQuery: false &#x2F;&#x2F; (Boolean) Allow px to be converted in media queries.</span><br><span class="line">        &#125;),</span><br><span class="line">        postcssWriteSvg(&#123;</span><br><span class="line">            utf8: false</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; postcssPresetEnv(&#123;&#125;),</span><br><span class="line">        postcssViewportUnits(&#123;</span><br><span class="line">            filterRule: rule &#x3D;&gt; rule.selector.indexOf(&#39;::after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;::before&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:before&#39;) &#x3D;&#x3D;&#x3D; -1</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; postcssViewportUnits(&#123;&#125;),</span><br><span class="line">        cssnano(&#123;</span><br><span class="line">            &quot;cssnano-preset-advanced&quot;: &#123;</span><br><span class="line">                zindex: false,</span><br><span class="line">                autoprefixer: false</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; add &#x3D;&#x3D;&#x3D;&#x3D;end &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">        &#x2F;&#x2F; Adds PostCSS Normalize as the reset css with default options,</span><br><span class="line">        &#x2F;&#x2F; so that it honors browserslist config in package.json</span><br><span class="line">        &#x2F;&#x2F; which in turn let&#39;s users customize the target behavior as per their needs.</span><br><span class="line">        postcssNormalize(),</span><br><span class="line">    ],</span><br></pre></td></tr></table></figure>
+
+<h1 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+            </div>
+        </article>
+    
+        <article class="post article-entry">
+            <div class="post-title">
+                <a class="post-title-link text-underline" href="/blog/2020/05/09/vue-vw/">vue  vw 配置</a>
+            </div>
+            <p class="sub">5月 09 2020</p>
+            <div class="post-content">
+                <h2 id="vw-配置"><a href="#vw-配置" class="headerlink" title="vw 配置"></a>vw 配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i postcss-import postcss-url autoprefixer less less-loader postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext cssnano postcss-viewport-units -S</span><br></pre></td></tr></table></figure>
+<p>.postcssrc.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    &quot;plugins&quot;: &#123;</span><br><span class="line">    &quot;postcss-import&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-url&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-aspect-ratio-mini&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-write-svg&quot;: &#123; utf8: false &#125;,</span><br><span class="line">    &quot;postcss-cssnext&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-px-to-viewport&quot;: &#123;</span><br><span class="line">        viewportWidth: 750,</span><br><span class="line">        viewportHeight: 1334,</span><br><span class="line">        unitPrecision: 3,</span><br><span class="line">        viewportUnit: &#39;vw&#39;,</span><br><span class="line">        selectorBlackList: [&#39;.ignore&#39;, &#39;.hairlines&#39;],</span><br><span class="line">        minPixelValue: 1,</span><br><span class="line">        mediaQuery: false</span><br><span class="line">         &#125;,</span><br><span class="line">    &quot;postcss-viewport-units&quot;:&#123;</span><br><span class="line">    &lt;!--图片出现样式问题  ios不显示 还要加上 img&#123; content: normal !important;&#125;--&gt;</span><br><span class="line"></span><br><span class="line">      filterRule: rule &#x3D;&gt; rule.selector.indexOf(&#39;::after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;::before&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:before&#39;) &#x3D;&#x3D;&#x3D; -1</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;cssnano&quot;: &#123;</span><br><span class="line">        preset: &quot;advanced&quot;,</span><br><span class="line">        autoprefixer: false,</span><br><span class="line">        &quot;postcss-zindex&quot;: false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="less-配置"><a href="#less-配置" class="headerlink" title="less 配置"></a>less 配置</h2><p>webpack.base.conf.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   test: &#x2F;\.less$&#x2F;,</span><br><span class="line">   loader: &quot;style-loader!css-loader!less-loader&quot;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<p> 下载依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; cnpm i less less-loader -S</span><br></pre></td></tr></table></figure>
+
+<hr/><hr/><hr/>
+
+<h1 id="vue-cli-3-0"><a href="#vue-cli-3-0" class="headerlink" title="vue-cli 3.0"></a>vue-cli 3.0</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i postcss-px-to-viewport -save -dev</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;postcss&quot;: &#123;</span><br><span class="line">        &quot;plugins&quot;: &#123;</span><br><span class="line">            &quot;autoprefixer&quot;: &#123;&#125;,</span><br><span class="line">            &quot;postcss-px-to-viewport&quot;: &#123;</span><br><span class="line">                &quot;viewportWidth&quot;: 750,</span><br><span class="line">                &quot;minPixelValue&quot;: 1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+            </div>
+        </article>
+    
+        <article class="post article-entry">
+            <div class="post-title">
+                <a class="post-title-link text-underline" href="/blog/2020/05/09/git/">git基本使用</a>
+            </div>
+            <p class="sub">5月 09 2020</p>
+            <div class="post-content">
+                <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h4 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git?"></a>什么是Git?</h4><ul>
+<li>Git是一款源代码管理工具(版本控制工具)<ul>
+<li>我们写的代码需要使用Git进行管理。</li>
+</ul>
+</li>
+</ul>
+<p>1.0是稳定<br>2.0加了新功能</p>
+<ul>
+<li>源代码有必要管理起吗？</li>
+<li>有必要，因为人工的去处理不同的版本，做相应备份会很麻烦。</li>
+<li>svn,vss,vcs,tfs…..</li>
+<li>Git是linux之父当年为了维护linux—linus之前也是手动维护合并把文件发给Linus</li>
+<li>BitKeeper(收费)</li>
+<li>有人想破解(不给提供免费使用)</li>
+<li>linus自己写了一个版本管理的工具（Git）</li>
+</ul>
+<h4 id="分布式版本管理工具，集中式"><a href="#分布式版本管理工具，集中式" class="headerlink" title="分布式版本管理工具，集中式"></a>分布式版本管理工具，集中式</h4><ul>
+<li>git属于分布式</li>
+<li>svn集中式</li>
+</ul>
+<h4 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h4><p>git初始化一个仓库</p>
+<ul>
+<li>其实就是创建了一个.git隐藏目录</li>
+<li>命令:git init;<ul>
+<li>想在哪个目录创建.git目录，就是哪个目录打开工具然后写命令.</li>
+<li>一般是在项目的根目录执行这个命令.</li>
+</ul>
+</li>
+</ul>
+<h4 id="自报家门"><a href="#自报家门" class="headerlink" title="自报家门"></a>自报家门</h4><ul>
+<li>配置用户名 : git config user.name “testName”</li>
+<li>配置邮箱 : git config user.email “<a href="mailto:test@sina.com">test@sina.com</a>“</li>
+<li>查看配置信息: git config –list</li>
+</ul>
+<h4 id="把代码提交到仓库中"><a href="#把代码提交到仓库中" class="headerlink" title="把代码提交到仓库中"></a>把代码提交到仓库中</h4><ul>
+<li><p>1.先把代码添加到暂存区(就相当于放到仓库门口)</p>
+<ul>
+<li>命令:git add 文件路径</li>
+<li>示例:git add ./reademe.md</li>
+<li>可以使用git add .这个命令，批量把当前目录下所有修改过的文件添加到暂存区。</li>
+</ul>
+</li>
+<li><p>2.把暂存区的文件提交仓库里</p>
+<ul>
+<li>命令: git commit -m “注释”</li>
+<li>示例: git commit -m “我们添加了一个新的功能”</li>
+<li>-m 表示指定一个字符串，作为提交的说明(相当于注释);</li>
+</ul>
+</li>
+<li><p>合并add 与commit 命令</p>
+<ul>
+<li>git commit -a -m “这是使用合并添加与提交的操作”;</li>
+<li>这里-a参数表明把所有修改后的文件一起添加到暂存区.(只是对修改后的文件有效，对于新添加的文件没有作用)</li>
+</ul>
+</li>
+</ul>
+<h4 id="查看工作区状态"><a href="#查看工作区状态" class="headerlink" title="查看工作区状态"></a>查看工作区状态</h4><ul>
+<li>命令:git status</li>
+</ul>
+<h4 id="添加忽略文件"><a href="#添加忽略文件" class="headerlink" title="添加忽略文件"></a>添加忽略文件</h4><ul>
+<li>在项目中有一些文件是不需要提交的,我们需要把它忽略掉</li>
+<li>需要在.git文件夹所在目录新建一个名为.gitignore的文件<br>然后在这个文件中写上需要被忽略的文件的路径。<br>示例: /css/a.css<br>: /css/*.css: /a.html</li>
+</ul>
+<h4 id="比对文件差异"><a href="#比对文件差异" class="headerlink" title="比对文件差异"></a>比对文件差异</h4><ul>
+<li>命令: git diff<ul>
+<li>用来比较工作区内容与最近一次提交的内容的区别</li>
+<li>如果暂存区没有文件，就会将工作与代码与最近一次提交对比</li>
+</ul>
+</li>
+<li>命令：git diff –cached 比较暂存区的文件和仓库中文件的区别</li>
+<li>对比之前某两次提交的文件的差异<ul>
+<li>命令:git diff [版本号1] [版本号2] [想比较的文件路径]</li>
+</ul>
+</li>
+</ul>
+<h4 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h4><ul>
+<li>命令:git log,可以查看每一次提交的日志</li>
+<li>命令:git log –oneline 表示使用简洁的形式输出提交日志</li>
+</ul>
+<h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><ul>
+<li>命令:git reset –hard Head~1<ul>
+<li>这是将代码回退到上上一次提交时的状态</li>
+</ul>
+</li>
+<li>命令:git reset –hard Head~2<ul>
+<li>回退到上上上次</li>
+</ul>
+</li>
+<li>命令:git reset –hard Head~0<ul>
+<li>回退到上次提交时的状态,~0可以省略</li>
+</ul>
+</li>
+<li>命令:git reset –hard 版本号<ul>
+<li>通过每次提交时生成的版本号来回退版本</li>
+</ul>
+</li>
+<li>通过git reflog命令可以查看之前所有版本切换的操作记录，可以通过这个命令得到的版本号回退到指定的版本。</li>
+</ul>
+<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><ul>
+<li>命令:git branch [分支名]<ul>
+<li>创建一个新分支</li>
+</ul>
+</li>
+<li>命令:git branch<ul>
+<li>查看当前所有的分支</li>
+</ul>
+</li>
+</ul>
+<h4 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h4><ul>
+<li>命令:git checkout [分支名]<ul>
+<li>切换分支后可以在切换后的分支中进行正常的操作</li>
+</ul>
+</li>
+</ul>
+<h4 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h4><ul>
+<li>命令:git merge [分支名]<ul>
+<li>git会将指定的分支合并到当前分支.</li>
+</ul>
+</li>
+</ul>
+<h4 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h4><ul>
+<li>命令:git branch -d [分支名]<ul>
+<li>删除指定分支，-d参数表示要执行删除操作</li>
+</ul>
+</li>
+</ul>
+<h4 id="git提交中的冲突"><a href="#git提交中的冲突" class="headerlink" title="git提交中的冲突"></a>git提交中的冲突</h4><ul>
+<li>如果git不能自动合并分支，就会有冲突，我们需要手动解决冲突，然后再次提交</li>
+</ul>
+<h4 id="github"><a href="#github" class="headerlink" title="github"></a>github</h4><p>github与git</p>
+<ul>
+<li>git 版本管理工具</li>
+<li>github 就是一个网站，只是这个网站提供git服务器的功能</li>
+</ul>
+<h4 id="上传代码到git服务器-push"><a href="#上传代码到git服务器-push" class="headerlink" title="上传代码到git服务器(push)"></a>上传代码到git服务器(push)</h4><ul>
+<li><p>命令:git push [远程服务器地址] [远程服务器的分支]</p>
+<ul>
+<li>示例:git push <a href="https://github.com/huoqishi/test002.git" target="_blank" rel="noopener">https://github.com/huoqishi/test002.git</a> master</li>
+</ul>
+</li>
+<li><p>上传时可以使用一些简化的命令</p>
+<ul>
+<li><p>将远程服务器地址写成变量的形式</p>
+<ul>
+<li>git remote add [变量名] [远程服务器地址]</li>
+<li>示例:git remote add origin <a href="https://github.com/huoqishi/test002.git" target="_blank" rel="noopener">https://github.com/huoqishi/test002.git</a></li>
+<li>这样之后就可以直接使用origin来代替git push 后面写的地址了<br>git push origin master</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>还可以尽一步简化</p>
+<ul>
+<li>在push时加上-u参数，就会默认建立本地当前分支与远程指定分支的关联,下一次push时就不需要输入分支名了git push origin;</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </article>
+    
+        <article class="post article-entry">
+            <div class="post-title">
                 <a class="post-title-link text-underline" href="/blog/2020/05/09/electron-win7-error/">electron打包应用在win7无法启动解决方案</a>
             </div>
             <p class="sub">5月 09 2020</p>
@@ -176,7 +388,7 @@ alias  别名 给路由起个名</code></pre><h2 id="404页面"><a href="#404页
         </div>
     <div class="tags">
     <h3 class="tags-title">Tags</h3>
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/electron/" rel="tag">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue/" rel="tag">vue</a><span class="tag-list-count">3</span></li></ul>
+    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/electron/" rel="tag">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue/" rel="tag">vue</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ract/" rel="tag">ract</a><span class="tag-list-count">1</span></li></ul>
 </div>
     </div>
 </div>

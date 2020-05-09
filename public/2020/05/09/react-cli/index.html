@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title> reat 初始化项目配置 @/、less、vw</title>
+<meta name="keywords" content="jscheng,js,JS_Cheng,js_cheng,blog">
+<meta name="description" content="jscheng 阳光语文">
+
+<link rel="stylesheet" href="/blog/styles/main.css">
+
+    <meta name="generator" content="Hexo 4.2.0"></head>
+    <body>
+        <div class="container">
+            <header>
+<div class="main">
+<div class="title">
+    <a href="#" class="logo">JS_Cheng</a>
+</div>
+<div class="site-nav">
+    <ul id="menu" class="menu">
+    
+        <li class="menu-item text-underline">
+            <a href="/blog/">主页</a>
+        </li>
+    
+        <li class="menu-item text-underline">
+            <a href="/blog/archives">归档</a>
+        </li>
+    
+        <li class="menu-item text-underline">
+            <a href="/blog/about/">关于</a>
+        </li>
+            
+    </ul>
+</div>
+</div>
+</header>
+            <main class="main">
+                <section class="posts clearfix">
+<div class="post-wrapper">
+    <article class="post article-entry">
+    <div class="post-title">
+        reat 初始化项目配置 @/、less、vw
+    </div>
+    <p class="sub">5月 09 2020</p>
+    <div class="post-content">
+        <h2 id=""><a href="#" class="headerlink" title="@/"></a>@/</h2><h6 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h6><p>resolve ===&gt; alias ===&gt; 添加 ‘@’:paths.appSrc</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alias: &#123;</span><br><span class="line">       &#x2F;&#x2F; Support React Native Web</span><br><span class="line">       &#x2F;&#x2F; https:&#x2F;&#x2F;www.smashingmagazine.com&#x2F;2016&#x2F;08&#x2F;a-glimpse-into-the-future-with-react-native-for-web&#x2F;</span><br><span class="line">       &#39;react-native&#39;: &#39;react-native-web&#39;,</span><br><span class="line">       &#x2F;&#x2F; Allows for better profiling with ReactDevTools</span><br><span class="line">       ...(isEnvProductionProfile &amp;&amp; &#123;</span><br><span class="line">         &#39;react-dom$&#39;: &#39;react-dom&#x2F;profiling&#39;,</span><br><span class="line">         &#39;scheduler&#x2F;tracing&#39;: &#39;scheduler&#x2F;tracing-profiling&#39;,</span><br><span class="line">       &#125;),</span><br><span class="line">       ...(modules.webpackAliases || &#123;&#125;),</span><br><span class="line">       &#x2F;&#x2F;todo &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;start&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">       &#39;@&#39;:paths.appSrc</span><br><span class="line">       &#x2F;&#x2F;todo &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;end&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">     &#125;,</span><br></pre></td></tr></table></figure>
+<h1 id="less"><a href="#less" class="headerlink" title="less"></a>less</h1><h6 id="装依赖"><a href="#装依赖" class="headerlink" title="装依赖"></a>装依赖</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add less less-loader -S</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i less less-loader -S</span><br></pre></td></tr></table></figure>
+<h6 id="webpack-config-js-1"><a href="#webpack-config-js-1" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 添加 style files regexes</span><br><span class="line">const lessRegex &#x3D; &#x2F;\.(less)$&#x2F;;</span><br><span class="line">const lessModuleRegex &#x3D; &#x2F;\.module\.(less)$&#x2F;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;css rules  &#x3D;&#x3D;&#x3D;&#x3D;&gt; sass 后边加上 或更改 sass</span><br><span class="line"> &#123;</span><br><span class="line">      test: lessRegex,</span><br><span class="line">      exclude: lessModuleRegex,</span><br><span class="line">      use: getStyleLoaders(</span><br><span class="line">        &#123;</span><br><span class="line">          importLoaders: 2,</span><br><span class="line">          sourceMap: isEnvProduction &amp;&amp; shouldUseSourceMap,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#39;less-loader&#39;</span><br><span class="line">      ),</span><br><span class="line">      &#x2F;&#x2F; Don&#39;t consider CSS imports dead code even if the</span><br><span class="line">      &#x2F;&#x2F; containing package claims to have no side effects.</span><br><span class="line">      &#x2F;&#x2F; Remove this when webpack adds a warning or an error for this.</span><br><span class="line">      &#x2F;&#x2F; See https:&#x2F;&#x2F;github.com&#x2F;webpack&#x2F;webpack&#x2F;issues&#x2F;6571</span><br><span class="line">      sideEffects: true,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<h1 id="Autoprefixer-px2vw"><a href="#Autoprefixer-px2vw" class="headerlink" title="Autoprefixer px2vw"></a>Autoprefixer px2vw</h1><h6 id="装依赖-1"><a href="#装依赖-1" class="headerlink" title="装依赖"></a>装依赖</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add  postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext postcss-viewport-units cssnano autoprefixer -D</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i --save postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext postcss-viewport-units cssnano autoprefixer</span><br></pre></td></tr></table></figure>
+<h6 id="webpack-config-js-2"><a href="#webpack-config-js-2" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;引入新添加</span><br><span class="line">const Autoprefixer &#x3D; require(&#39;autoprefixer&#39;);</span><br><span class="line">const postcssAspectRatioMini &#x3D; require(&#39;postcss-aspect-ratio-mini&#39;);</span><br><span class="line">const postcssPxToViewport &#x3D; require(&#39;postcss-px-to-viewport&#39;);</span><br><span class="line">const postcssWriteSvg &#x3D; require(&#39;postcss-write-svg&#39;);</span><br><span class="line">const postcssCssnext &#x3D; require(&#39;postcss-cssnext&#39;);</span><br><span class="line">const postcssViewportUnits &#x3D; require(&#39;postcss-viewport-units&#39;);</span><br><span class="line">const cssnano &#x3D; require(&#39;cssnano&#39;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;getStyleLoaders &#x3D;&#x3D;&#x3D;&gt; plugins</span><br><span class="line">plugins: () &#x3D;&gt; [</span><br><span class="line">        require(&#39;postcss-flexbugs-fixes&#39;),</span><br><span class="line">        &#x2F;&#x2F; add&#x3D;&#x3D;&#x3D;start&#x3D;&#x3D;&#x3D;</span><br><span class="line">        Autoprefixer(&#123;</span><br><span class="line">            overrideBrowserslist: [</span><br><span class="line">                &quot;Android 4.1&quot;,</span><br><span class="line">                &quot;iOS 7.1&quot;,</span><br><span class="line">                &quot;Chrome &gt; 31&quot;,</span><br><span class="line">                &quot;ff &gt; 31&quot;,</span><br><span class="line">                &quot;ie &gt;&#x3D; 8&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;end&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">        require(&#39;postcss-preset-env&#39;)(&#123;</span><br><span class="line">            autoprefixer: &#123;</span><br><span class="line">                flexbox: &#39;no-2009&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            stage: 3,</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; add &#x3D;&#x3D;&#x3D;&#x3D;start &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">        postcssAspectRatioMini(&#123;&#125;),</span><br><span class="line">        postcssPxToViewport(&#123;</span><br><span class="line">            viewportWidth: 375, &#x2F;&#x2F; (Number) The width of the viewport.</span><br><span class="line">            viewportHeight: 667, &#x2F;&#x2F; (Number) The height of the viewport.</span><br><span class="line">            unitPrecision: 3, &#x2F;&#x2F; (Number) The decimal numbers to allow the REM units to grow to.</span><br><span class="line">            viewportUnit: &#39;vw&#39;, &#x2F;&#x2F; (String) Expected units.</span><br><span class="line">            selectorBlackList: [&#39;.ignore&#39;, &#39;.hairlines&#39;, &#39;.list-row-bottom-line&#39;, &#39;.list-row-top-line&#39;], &#x2F;&#x2F; (Array) The selectors to ignore and leave as px.</span><br><span class="line">            minPixelValue: 1, &#x2F;&#x2F; (Number) Set the minimum pixel value to replace.</span><br><span class="line">            mediaQuery: false &#x2F;&#x2F; (Boolean) Allow px to be converted in media queries.</span><br><span class="line">        &#125;),</span><br><span class="line">        postcssWriteSvg(&#123;</span><br><span class="line">            utf8: false</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; postcssPresetEnv(&#123;&#125;),</span><br><span class="line">        postcssViewportUnits(&#123;</span><br><span class="line">            filterRule: rule &#x3D;&gt; rule.selector.indexOf(&#39;::after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;::before&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:before&#39;) &#x3D;&#x3D;&#x3D; -1</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; postcssViewportUnits(&#123;&#125;),</span><br><span class="line">        cssnano(&#123;</span><br><span class="line">            &quot;cssnano-preset-advanced&quot;: &#123;</span><br><span class="line">                zindex: false,</span><br><span class="line">                autoprefixer: false</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; add &#x3D;&#x3D;&#x3D;&#x3D;end &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">        &#x2F;&#x2F; Adds PostCSS Normalize as the reset css with default options,</span><br><span class="line">        &#x2F;&#x2F; so that it honors browserslist config in package.json</span><br><span class="line">        &#x2F;&#x2F; which in turn let&#39;s users customize the target behavior as per their needs.</span><br><span class="line">        postcssNormalize(),</span><br><span class="line">    ],</span><br></pre></td></tr></table></figure>
+
+<h1 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    </div>
+    </article>
+</div>
+
+    <div class="_toc">
+        <!--<strong class="toc-title">-->
+        <!--Contents-->
+        <!--</strong>-->
+        <div class="toc-content">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-text">@&#x2F;</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#webpack-config-js"><span class="toc-text">webpack.config.js</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#less"><span class="toc-text">less</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#装依赖"><span class="toc-text">装依赖</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#webpack-config-js-1"><span class="toc-text">webpack.config.js</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Autoprefixer-px2vw"><span class="toc-text">Autoprefixer px2vw</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#装依赖-1"><span class="toc-text">装依赖</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#webpack-config-js-2"><span class="toc-text">webpack.config.js</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#redux"><span class="toc-text">redux</span></a>
+        </div>
+    </div>
+
+</section>
+
+
+    <nav class="post-nav">
+        
+            <div class="page-tags">
+                
+                    <a href="/blog/tags/ract/">ract</a>
+                
+            </div>
+        
+    </nav>
+
+
+
+    <nav class="paginator clearfix">
+        
+        
+            <a class="next" href="/blog/2020/05/09/vue-vw/">
+                
+                <span class="prev-text">vue  vw 配置</span>
+                <i class="iconfont icon-right"></i>
+            </a>
+        
+    </nav>
+
+
+
+            </main>
+            <div class="copyright">
+  <div class="text">Powered By Hexo | Theme Tsu &copy 2020 jscheng</div>
+</div>
+
+        </div>
+    <div class="back-to-top" id="back-to-top">
+            <i class="iconfont icon-up"></i>
+    </div>
+        
+    </body>
+    
+<script src="/blog/js/jquery-3.3.1.min.js"></script>
+
+    
+<script src="/blog/js/back-to-top.js"></script>
+
+    
+<script src="/blog/js/scroll.js"></script>
+
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</html>
