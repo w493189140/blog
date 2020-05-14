@@ -9,9 +9,10 @@
   border-bottom: 1px solid #eee;
 }
 .post-title {
-  font-size: 38px;
+  font-size: 32px;
   color: #555;
   font-family: 'Montserrat';
+  font-weight: bold;
 }
 .sub {
   color: #aaa;
@@ -33,4 +34,20 @@
 .post-wrapper .post {
   padding: 30px 20px;
   border-bottom: 1px solid #eee;
+}
+.index-page .post-content {
+  max-height: 350px;
+  overflow: hidden;
+  padding: 15px 0;
+}
+.index-page .post-title {
+  font-size: 22px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.themore {
+  text-align: right;
+  margin-top: 15px;
 }

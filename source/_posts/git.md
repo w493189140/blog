@@ -2,6 +2,7 @@
 title: git基本使用
 date: 2020-05-09 13:49:58
 tags: git
+categories: 教程
 ---
 
 ## Git

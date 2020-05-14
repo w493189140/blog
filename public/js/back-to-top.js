@@ -1,21 +1,21 @@
 $(function(){
     //gitee
-    // var _hmt = _hmt || [];
-    // var hm = document.createElement("script");
-    // hm.src = "https://hm.baidu.com/hm.js?c5634179d6c9f3e675c707f85436a345";
-    // var s = document.getElementsByTagName("script")[0];
-    // s.parentNode.insertBefore(hm, s);
+    var _hmt = _hmt || [];
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?c5634179d6c9f3e675c707f85436a345";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
 
-
+    console.log(window)
 
     //jscheng
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?48711b05b1c1178a5b74ec9dcd75c600";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
+    // var _hmt = _hmt || [];
+    // (function() {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?48711b05b1c1178a5b74ec9dcd75c600";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
 
     //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
     $(function () {

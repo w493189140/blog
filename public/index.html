@@ -1,458 +1,707 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?48711b05b1c1178a5b74ec9dcd75c600"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title> jscheng blog</title>
-<!--<link rel="shortcut icon" href="/blog/favicon.ico">-->
-<meta name="keywords" content="jscheng,js,JS_Cheng,js_cheng,blog">
-<meta name="description" content="jscheng 阳光语文">
-
-<link rel="stylesheet" href="/styles/main.css">
-
-    <meta name="generator" content="Hexo 4.2.0"></head>
-    <body>
-        <div class="container">
-            <header>
-<div class="main">
-<div class="title">
-    <a href="#" class="logo">JS_Cheng</a>
-</div>
-<div class="site-nav">
-    <ul id="menu" class="menu">
     
-        <li class="menu-item text-underline">
-            <a href="/">主页</a>
-        </li>
     
-        <li class="menu-item text-underline">
-            <a href="/archives">归档</a>
-        </li>
     
-        <li class="menu-item text-underline">
-            <a href="/about/">关于</a>
-        </li>
-            
-    </ul>
-</div>
-</div>
-</header>
-            <main class="main">
-                <section class="posts clearfix">
-    <div class="posts-wrapper">
     
-        <article class="post article-entry">
-            <div class="post-title">
-                <a class="post-title-link text-underline" href="/2020/05/09/react-cli/">react 初始化项目配置 @/、less、vw</a>
-            </div>
-            <p class="sub">5月 09 2020</p>
-            <div class="post-content">
-                <h2 id=""><a href="#" class="headerlink" title="@/"></a>@/</h2><h6 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h6><p>resolve ===&gt; alias ===&gt; 添加 ‘@’:paths.appSrc</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alias: &#123;</span><br><span class="line">       &#x2F;&#x2F; Support React Native Web</span><br><span class="line">       &#x2F;&#x2F; https:&#x2F;&#x2F;www.smashingmagazine.com&#x2F;2016&#x2F;08&#x2F;a-glimpse-into-the-future-with-react-native-for-web&#x2F;</span><br><span class="line">       &#39;react-native&#39;: &#39;react-native-web&#39;,</span><br><span class="line">       &#x2F;&#x2F; Allows for better profiling with ReactDevTools</span><br><span class="line">       ...(isEnvProductionProfile &amp;&amp; &#123;</span><br><span class="line">         &#39;react-dom$&#39;: &#39;react-dom&#x2F;profiling&#39;,</span><br><span class="line">         &#39;scheduler&#x2F;tracing&#39;: &#39;scheduler&#x2F;tracing-profiling&#39;,</span><br><span class="line">       &#125;),</span><br><span class="line">       ...(modules.webpackAliases || &#123;&#125;),</span><br><span class="line">       &#x2F;&#x2F;todo &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;start&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">       &#39;@&#39;:paths.appSrc</span><br><span class="line">       &#x2F;&#x2F;todo &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;end&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">     &#125;,</span><br></pre></td></tr></table></figure>
-<h1 id="less"><a href="#less" class="headerlink" title="less"></a>less</h1><h6 id="装依赖"><a href="#装依赖" class="headerlink" title="装依赖"></a>装依赖</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add less less-loader -S</span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i less less-loader -S</span><br></pre></td></tr></table></figure>
-<h6 id="webpack-config-js-1"><a href="#webpack-config-js-1" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 添加 style files regexes</span><br><span class="line">const lessRegex &#x3D; &#x2F;\.(less)$&#x2F;;</span><br><span class="line">const lessModuleRegex &#x3D; &#x2F;\.module\.(less)$&#x2F;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;css rules  &#x3D;&#x3D;&#x3D;&#x3D;&gt; sass 后边加上 或更改 sass</span><br><span class="line"> &#123;</span><br><span class="line">      test: lessRegex,</span><br><span class="line">      exclude: lessModuleRegex,</span><br><span class="line">      use: getStyleLoaders(</span><br><span class="line">        &#123;</span><br><span class="line">          importLoaders: 2,</span><br><span class="line">          sourceMap: isEnvProduction &amp;&amp; shouldUseSourceMap,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#39;less-loader&#39;</span><br><span class="line">      ),</span><br><span class="line">      &#x2F;&#x2F; Don&#39;t consider CSS imports dead code even if the</span><br><span class="line">      &#x2F;&#x2F; containing package claims to have no side effects.</span><br><span class="line">      &#x2F;&#x2F; Remove this when webpack adds a warning or an error for this.</span><br><span class="line">      &#x2F;&#x2F; See https:&#x2F;&#x2F;github.com&#x2F;webpack&#x2F;webpack&#x2F;issues&#x2F;6571</span><br><span class="line">      sideEffects: true,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-<h1 id="Autoprefixer-px2vw"><a href="#Autoprefixer-px2vw" class="headerlink" title="Autoprefixer px2vw"></a>Autoprefixer px2vw</h1><h6 id="装依赖-1"><a href="#装依赖-1" class="headerlink" title="装依赖"></a>装依赖</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add  postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext postcss-viewport-units cssnano autoprefixer -D</span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i --save postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext postcss-viewport-units cssnano autoprefixer</span><br></pre></td></tr></table></figure>
-<h6 id="webpack-config-js-2"><a href="#webpack-config-js-2" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;引入新添加</span><br><span class="line">const Autoprefixer &#x3D; require(&#39;autoprefixer&#39;);</span><br><span class="line">const postcssAspectRatioMini &#x3D; require(&#39;postcss-aspect-ratio-mini&#39;);</span><br><span class="line">const postcssPxToViewport &#x3D; require(&#39;postcss-px-to-viewport&#39;);</span><br><span class="line">const postcssWriteSvg &#x3D; require(&#39;postcss-write-svg&#39;);</span><br><span class="line">const postcssCssnext &#x3D; require(&#39;postcss-cssnext&#39;);</span><br><span class="line">const postcssViewportUnits &#x3D; require(&#39;postcss-viewport-units&#39;);</span><br><span class="line">const cssnano &#x3D; require(&#39;cssnano&#39;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;getStyleLoaders &#x3D;&#x3D;&#x3D;&gt; plugins</span><br><span class="line">plugins: () &#x3D;&gt; [</span><br><span class="line">        require(&#39;postcss-flexbugs-fixes&#39;),</span><br><span class="line">        &#x2F;&#x2F; add&#x3D;&#x3D;&#x3D;start&#x3D;&#x3D;&#x3D;</span><br><span class="line">        Autoprefixer(&#123;</span><br><span class="line">            overrideBrowserslist: [</span><br><span class="line">                &quot;Android 4.1&quot;,</span><br><span class="line">                &quot;iOS 7.1&quot;,</span><br><span class="line">                &quot;Chrome &gt; 31&quot;,</span><br><span class="line">                &quot;ff &gt; 31&quot;,</span><br><span class="line">                &quot;ie &gt;&#x3D; 8&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;end&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">        require(&#39;postcss-preset-env&#39;)(&#123;</span><br><span class="line">            autoprefixer: &#123;</span><br><span class="line">                flexbox: &#39;no-2009&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            stage: 3,</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; add &#x3D;&#x3D;&#x3D;&#x3D;start &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">        postcssAspectRatioMini(&#123;&#125;),</span><br><span class="line">        postcssPxToViewport(&#123;</span><br><span class="line">            viewportWidth: 375, &#x2F;&#x2F; (Number) The width of the viewport.</span><br><span class="line">            viewportHeight: 667, &#x2F;&#x2F; (Number) The height of the viewport.</span><br><span class="line">            unitPrecision: 3, &#x2F;&#x2F; (Number) The decimal numbers to allow the REM units to grow to.</span><br><span class="line">            viewportUnit: &#39;vw&#39;, &#x2F;&#x2F; (String) Expected units.</span><br><span class="line">            selectorBlackList: [&#39;.ignore&#39;, &#39;.hairlines&#39;, &#39;.list-row-bottom-line&#39;, &#39;.list-row-top-line&#39;], &#x2F;&#x2F; (Array) The selectors to ignore and leave as px.</span><br><span class="line">            minPixelValue: 1, &#x2F;&#x2F; (Number) Set the minimum pixel value to replace.</span><br><span class="line">            mediaQuery: false &#x2F;&#x2F; (Boolean) Allow px to be converted in media queries.</span><br><span class="line">        &#125;),</span><br><span class="line">        postcssWriteSvg(&#123;</span><br><span class="line">            utf8: false</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; postcssPresetEnv(&#123;&#125;),</span><br><span class="line">        postcssViewportUnits(&#123;</span><br><span class="line">            filterRule: rule &#x3D;&gt; rule.selector.indexOf(&#39;::after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;::before&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:before&#39;) &#x3D;&#x3D;&#x3D; -1</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; postcssViewportUnits(&#123;&#125;),</span><br><span class="line">        cssnano(&#123;</span><br><span class="line">            &quot;cssnano-preset-advanced&quot;: &#123;</span><br><span class="line">                zindex: false,</span><br><span class="line">                autoprefixer: false</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;&#x2F; add &#x3D;&#x3D;&#x3D;&#x3D;end &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">        &#x2F;&#x2F; Adds PostCSS Normalize as the reset css with default options,</span><br><span class="line">        &#x2F;&#x2F; so that it honors browserslist config in package.json</span><br><span class="line">        &#x2F;&#x2F; which in turn let&#39;s users customize the target behavior as per their needs.</span><br><span class="line">        postcssNormalize(),</span><br><span class="line">    ],</span><br></pre></td></tr></table></figure>
-
-<h1 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-            </div>
-        </article>
+    <title>jscheng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <article class="post article-entry">
-            <div class="post-title">
-                <a class="post-title-link text-underline" href="/2020/05/09/vue-vw/">vue  vw 配置</a>
-            </div>
-            <p class="sub">5月 09 2020</p>
-            <div class="post-content">
-                <h2 id="vw-配置"><a href="#vw-配置" class="headerlink" title="vw 配置"></a>vw 配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i postcss-import postcss-url autoprefixer less less-loader postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext cssnano postcss-viewport-units -S</span><br></pre></td></tr></table></figure>
-<p>.postcssrc.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    &quot;plugins&quot;: &#123;</span><br><span class="line">    &quot;postcss-import&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-url&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-aspect-ratio-mini&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-write-svg&quot;: &#123; utf8: false &#125;,</span><br><span class="line">    &quot;postcss-cssnext&quot;: &#123;&#125;,</span><br><span class="line">    &quot;postcss-px-to-viewport&quot;: &#123;</span><br><span class="line">        viewportWidth: 750,</span><br><span class="line">        viewportHeight: 1334,</span><br><span class="line">        unitPrecision: 3,</span><br><span class="line">        viewportUnit: &#39;vw&#39;,</span><br><span class="line">        selectorBlackList: [&#39;.ignore&#39;, &#39;.hairlines&#39;],</span><br><span class="line">        minPixelValue: 1,</span><br><span class="line">        mediaQuery: false</span><br><span class="line">         &#125;,</span><br><span class="line">    &quot;postcss-viewport-units&quot;:&#123;</span><br><span class="line">    &lt;!--图片出现样式问题  ios不显示 还要加上 img&#123; content: normal !important;&#125;--&gt;</span><br><span class="line"></span><br><span class="line">      filterRule: rule &#x3D;&gt; rule.selector.indexOf(&#39;::after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;::before&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:after&#39;) &#x3D;&#x3D;&#x3D; -1 &amp;&amp; rule.selector.indexOf(&#39;:before&#39;) &#x3D;&#x3D;&#x3D; -1</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;cssnano&quot;: &#123;</span><br><span class="line">        preset: &quot;advanced&quot;,</span><br><span class="line">        autoprefixer: false,</span><br><span class="line">        &quot;postcss-zindex&quot;: false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="less-配置"><a href="#less-配置" class="headerlink" title="less 配置"></a>less 配置</h2><p>webpack.base.conf.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   test: &#x2F;\.less$&#x2F;,</span><br><span class="line">   loader: &quot;style-loader!css-loader!less-loader&quot;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
-<p> 下载依赖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; cnpm i less less-loader -S</span><br></pre></td></tr></table></figure>
-
-<hr/><hr/><hr/>
-
-<h1 id="vue-cli-3-0"><a href="#vue-cli-3-0" class="headerlink" title="vue-cli 3.0"></a>vue-cli 3.0</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i postcss-px-to-viewport -save -dev</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;postcss&quot;: &#123;</span><br><span class="line">        &quot;plugins&quot;: &#123;</span><br><span class="line">            &quot;autoprefixer&quot;: &#123;&#125;,</span><br><span class="line">            &quot;postcss-px-to-viewport&quot;: &#123;</span><br><span class="line">                &quot;viewportWidth&quot;: 750,</span><br><span class="line">                &quot;minPixelValue&quot;: 1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-            </div>
-        </article>
+    <meta name="theme-color" content="#3F51B5">
     
-        <article class="post article-entry">
-            <div class="post-title">
-                <a class="post-title-link text-underline" href="/2020/05/09/git/">git基本使用</a>
-            </div>
-            <p class="sub">5月 09 2020</p>
-            <div class="post-content">
-                <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h4 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git?"></a>什么是Git?</h4><ul>
-<li>Git是一款源代码管理工具(版本控制工具)<ul>
-<li>我们写的代码需要使用Git进行管理。</li>
-</ul>
-</li>
-</ul>
-<p>1.0是稳定<br>2.0加了新功能</p>
-<ul>
-<li>源代码有必要管理起吗？</li>
-<li>有必要，因为人工的去处理不同的版本，做相应备份会很麻烦。</li>
-<li>svn,vss,vcs,tfs…..</li>
-<li>Git是linux之父当年为了维护linux—linus之前也是手动维护合并把文件发给Linus</li>
-<li>BitKeeper(收费)</li>
-<li>有人想破解(不给提供免费使用)</li>
-<li>linus自己写了一个版本管理的工具（Git）</li>
-</ul>
-<h4 id="分布式版本管理工具，集中式"><a href="#分布式版本管理工具，集中式" class="headerlink" title="分布式版本管理工具，集中式"></a>分布式版本管理工具，集中式</h4><ul>
-<li>git属于分布式</li>
-<li>svn集中式</li>
-</ul>
-<h4 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h4><p>git初始化一个仓库</p>
-<ul>
-<li>其实就是创建了一个.git隐藏目录</li>
-<li>命令:git init;<ul>
-<li>想在哪个目录创建.git目录，就是哪个目录打开工具然后写命令.</li>
-<li>一般是在项目的根目录执行这个命令.</li>
-</ul>
-</li>
-</ul>
-<h4 id="自报家门"><a href="#自报家门" class="headerlink" title="自报家门"></a>自报家门</h4><ul>
-<li>配置用户名 : git config user.name “testName”</li>
-<li>配置邮箱 : git config user.email “<a href="mailto:test@sina.com">test@sina.com</a>“</li>
-<li>查看配置信息: git config –list</li>
-</ul>
-<h4 id="把代码提交到仓库中"><a href="#把代码提交到仓库中" class="headerlink" title="把代码提交到仓库中"></a>把代码提交到仓库中</h4><ul>
-<li><p>1.先把代码添加到暂存区(就相当于放到仓库门口)</p>
-<ul>
-<li>命令:git add 文件路径</li>
-<li>示例:git add ./reademe.md</li>
-<li>可以使用git add .这个命令，批量把当前目录下所有修改过的文件添加到暂存区。</li>
-</ul>
-</li>
-<li><p>2.把暂存区的文件提交仓库里</p>
-<ul>
-<li>命令: git commit -m “注释”</li>
-<li>示例: git commit -m “我们添加了一个新的功能”</li>
-<li>-m 表示指定一个字符串，作为提交的说明(相当于注释);</li>
-</ul>
-</li>
-<li><p>合并add 与commit 命令</p>
-<ul>
-<li>git commit -a -m “这是使用合并添加与提交的操作”;</li>
-<li>这里-a参数表明把所有修改后的文件一起添加到暂存区.(只是对修改后的文件有效，对于新添加的文件没有作用)</li>
-</ul>
-</li>
-</ul>
-<h4 id="查看工作区状态"><a href="#查看工作区状态" class="headerlink" title="查看工作区状态"></a>查看工作区状态</h4><ul>
-<li>命令:git status</li>
-</ul>
-<h4 id="添加忽略文件"><a href="#添加忽略文件" class="headerlink" title="添加忽略文件"></a>添加忽略文件</h4><ul>
-<li>在项目中有一些文件是不需要提交的,我们需要把它忽略掉</li>
-<li>需要在.git文件夹所在目录新建一个名为.gitignore的文件<br>然后在这个文件中写上需要被忽略的文件的路径。<br>示例: /css/a.css<br>: /css/*.css: /a.html</li>
-</ul>
-<h4 id="比对文件差异"><a href="#比对文件差异" class="headerlink" title="比对文件差异"></a>比对文件差异</h4><ul>
-<li>命令: git diff<ul>
-<li>用来比较工作区内容与最近一次提交的内容的区别</li>
-<li>如果暂存区没有文件，就会将工作与代码与最近一次提交对比</li>
-</ul>
-</li>
-<li>命令：git diff –cached 比较暂存区的文件和仓库中文件的区别</li>
-<li>对比之前某两次提交的文件的差异<ul>
-<li>命令:git diff [版本号1] [版本号2] [想比较的文件路径]</li>
-</ul>
-</li>
-</ul>
-<h4 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h4><ul>
-<li>命令:git log,可以查看每一次提交的日志</li>
-<li>命令:git log –oneline 表示使用简洁的形式输出提交日志</li>
-</ul>
-<h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><ul>
-<li>命令:git reset –hard Head~1<ul>
-<li>这是将代码回退到上上一次提交时的状态</li>
-</ul>
-</li>
-<li>命令:git reset –hard Head~2<ul>
-<li>回退到上上上次</li>
-</ul>
-</li>
-<li>命令:git reset –hard Head~0<ul>
-<li>回退到上次提交时的状态,~0可以省略</li>
-</ul>
-</li>
-<li>命令:git reset –hard 版本号<ul>
-<li>通过每次提交时生成的版本号来回退版本</li>
-</ul>
-</li>
-<li>通过git reflog命令可以查看之前所有版本切换的操作记录，可以通过这个命令得到的版本号回退到指定的版本。</li>
-</ul>
-<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><ul>
-<li>命令:git branch [分支名]<ul>
-<li>创建一个新分支</li>
-</ul>
-</li>
-<li>命令:git branch<ul>
-<li>查看当前所有的分支</li>
-</ul>
-</li>
-</ul>
-<h4 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h4><ul>
-<li>命令:git checkout [分支名]<ul>
-<li>切换分支后可以在切换后的分支中进行正常的操作</li>
-</ul>
-</li>
-</ul>
-<h4 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h4><ul>
-<li>命令:git merge [分支名]<ul>
-<li>git会将指定的分支合并到当前分支.</li>
-</ul>
-</li>
-</ul>
-<h4 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h4><ul>
-<li>命令:git branch -d [分支名]<ul>
-<li>删除指定分支，-d参数表示要执行删除操作</li>
-</ul>
-</li>
-</ul>
-<h4 id="git提交中的冲突"><a href="#git提交中的冲突" class="headerlink" title="git提交中的冲突"></a>git提交中的冲突</h4><ul>
-<li>如果git不能自动合并分支，就会有冲突，我们需要手动解决冲突，然后再次提交</li>
-</ul>
-<h4 id="github"><a href="#github" class="headerlink" title="github"></a>github</h4><p>github与git</p>
-<ul>
-<li>git 版本管理工具</li>
-<li>github 就是一个网站，只是这个网站提供git服务器的功能</li>
-</ul>
-<h4 id="上传代码到git服务器-push"><a href="#上传代码到git服务器-push" class="headerlink" title="上传代码到git服务器(push)"></a>上传代码到git服务器(push)</h4><ul>
-<li><p>命令:git push [远程服务器地址] [远程服务器的分支]</p>
-<ul>
-<li>示例:git push <a href="https://github.com/huoqishi/test002.git" target="_blank" rel="noopener">https://github.com/huoqishi/test002.git</a> master</li>
-</ul>
-</li>
-<li><p>上传时可以使用一些简化的命令</p>
-<ul>
-<li><p>将远程服务器地址写成变量的形式</p>
-<ul>
-<li>git remote add [变量名] [远程服务器地址]</li>
-<li>示例:git remote add origin <a href="https://github.com/huoqishi/test002.git" target="_blank" rel="noopener">https://github.com/huoqishi/test002.git</a></li>
-<li>这样之后就可以直接使用origin来代替git push 后面写的地址了<br>git push origin master</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>还可以尽一步简化</p>
-<ul>
-<li>在push时加上-u参数，就会默认建立本地当前分支与远程指定分支的关联,下一次push时就不需要输入分支名了git push origin;</li>
-</ul>
-</li>
-</ul>
-
-            </div>
-        </article>
     
-        <article class="post article-entry">
-            <div class="post-title">
-                <a class="post-title-link text-underline" href="/2020/05/09/electron-win7-error/">electron打包应用在win7无法启动解决方案</a>
-            </div>
-            <p class="sub">5月 09 2020</p>
-            <div class="post-content">
-                <h2 id="问题-1：win7兼容"><a href="#问题-1：win7兼容" class="headerlink" title="问题 1：win7兼容"></a>问题 1：win7兼容</h2><p>electron打包后的app，在win7的某些电脑（非管理员的情况下有一定概率出现）双击软件安装后生成的快捷方式，然后啥事情也没有发生，但是打开控制台可以看到应用的进程启动一下然后快速被关掉。<br> 解决方法：</p>
-<h5 id="1-方法一："><a href="#1-方法一：" class="headerlink" title="1. 方法一："></a>1. 方法一：</h5><pre><code>软件的兼容性问题，可能是有些电脑的系统比较古老，
-和electron有兼容性问题，更新electron版本比较容易有其他问题，
-解决方法是以兼容模式启动运行软件。步骤如下：
-第一步，把鼠标放在快捷方式的图标上，右击选择--属性--选项
-第二步， 点击兼容性，把-- 以兼容模式运行这个程序--打勾，
-然后下面下拉选择你当前系统的类型。然后点击确定，最后重开软件。</code></pre><h5 id="2-方法二："><a href="#2-方法二：" class="headerlink" title="2. 方法二："></a>2. 方法二：</h5><pre><code>卸载重新安装，注意用管理员模式安装，同时关闭杀毒软件。
-有些情况下因为杀毒软件的原因把软件的某些文件删掉造成无法启动，
-用管理员模式启动软件；</code></pre><br/>
-<br/>
-
-<hr>
-<br/>
-<br/>
-
-<h2 id="问题2：win7上打不开，后台进程中有"><a href="#问题2：win7上打不开，后台进程中有" class="headerlink" title="问题2：win7上打不开，后台进程中有"></a>问题2：win7上打不开，后台进程中有</h2><p>electron打包文件，在某些windows7上打不开，后台进程中有，只是页面不显示<br>研究发现，页面打不开，进程中有，是因为这个程序的优先级的问题，如果把程序的优先级调高，那就可以打开。<br>所以想到了用bat脚本来启动程序，这样就可以用高优先级运行程序。其实我一直想找一种办法就是在代码里控制windows的注册表，<br>从注册表中来调高程序的优先级。</p>
-<p>下面是bat文件的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start &#x2F;HIGH &quot;.\阳光语文 x.x.x.exe&quot;</span><br></pre></td></tr></table></figure>
-
-<pre><code>解释：
-start       // 开启
-/HIGH       //高优先级，这是windows上的，还有其他的级别，可以百度哈
-“.”         // 相对路径，用来找到你想启动的程序
-****.exe    // 这是你要启动的程序的exe文件
-写完后，把文件的后缀改为.bat，这样双击就能运行了</code></pre><br/>
-<br/>
-
-<h2 id="问题3：在win7下白屏"><a href="#问题3：在win7下白屏" class="headerlink" title="问题3：在win7下白屏"></a>问题3：在win7下白屏</h2><p>electron桌面客户端软件，部分用户安装以后会出现白屏问题，经过测试发现，<br>其实软件根本没有完全启动，但是打印log却又完整的执行了页面的渲染，但是软件完全白屏。</p>
-<p>查看是win7极限精简版。</p>
-<p>解决：</p>
-<pre><code>发现 win7系统的 .NET Framework 可能版本超级过低
-然后安装了最新版的.NET Framework（用于Windows的新托管代码编程模型）。</code></pre><p><a href="https://dotnet.microsoft.com/download/dotnet-framework" target="_blank" rel="noopener">.NET Framework 微软官方下载链接</a></p>
-<br/>
-<br/>
-
-<h2 id="问题4：在win7点击electron缺少-dll-文件"><a href="#问题4：在win7点击electron缺少-dll-文件" class="headerlink" title="问题4：在win7点击electron缺少 *.dll 文件"></a>问题4：在win7点击electron缺少 *.dll 文件</h2><p>1.下载DirectX修复工具并解压。<br>2.根据自己的系统，点击“DirectX Repair”文件，或者点击“DirectX_Repair_win8”，点击“检测并修复”选项。<br>3.等待修复完成，然后点击“确定”和“退出”，再重启电脑即可。</p>
-<p><a href="http://forspeed.onlinedown.net/down/120082DirectX_Repair-V3_9.7z" target="_blank" rel="noopener">DirectX</a><br>失效时点击下边下载<br><a href="https://www.onlinedown.net/soft/120082.htm" target="_blank" rel="noopener">DirectX下载链接</a><br>请选择本地下载 ===&gt;普通下载地址</p>
-
-            </div>
-        </article>
+    <meta name="keywords" content="jscheng,博客,阳光喔,阳光语文">
+    <meta name="description" content="jscheng 的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jscheng">
+<meta property="og:url" content="https://w493189140.gitee.io/blog/index.html">
+<meta property="og:site_name" content="jscheng">
+<meta property="og:description" content="jscheng 的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="jscheng">
+<meta property="article:tag" content="jscheng">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="阳光喔">
+<meta property="article:tag" content="阳光语文">
+<meta name="twitter:card" content="summary">
     
-        <article class="post article-entry">
-            <div class="post-title">
-                <a class="post-title-link text-underline" href="/2020/05/07/vue-router/">vueRouter 设置</a>
-            </div>
-            <p class="sub">5月 07 2020</p>
-            <div class="post-content">
-                <h3 id="去掉hash的"><a href="#去掉hash的" class="headerlink" title="去掉hash的#"></a>去掉hash的#</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  hashbang: false,</span><br><span class="line">  mode: &#39;history&#39;,</span><br><span class="line">  routes: []</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
-<p>hashbang<br>默认值： true<br>只在 hash 模式下可用<br>当 hashbang 值为 true 时，所有的路径都会被格式化为以 #! 开头。例如 router.go(‘/foo/bar’) 会把浏览器的 URL 设为 example.com/#!/foo/bar 。</p>
-<h2 id="引入全局base-css"><a href="#引入全局base-css" class="headerlink" title="引入全局base.css"></a>引入全局base.css</h2><p>main.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &quot;.&#x2F;assets&#x2F;base.css&quot;</span><br></pre></td></tr></table></figure>
-<p>base.css 放在assets 下</p>
-<h2 id="vueX"><a href="#vueX" class="headerlink" title="vueX"></a>vueX</h2><p>main.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import Vuex from &#39;vuex&#39;</span><br><span class="line">import store from &#39;.&#x2F;vuex&#x2F;store&#39;</span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &#39;#app&#39;,</span><br><span class="line">  router,</span><br><span class="line">  store,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: &#39;&lt;App&#x2F;&gt;&#39;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>新建文件夹vuex  建立store.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;store.js</span><br><span class="line">import Vue from &#39;vue&#39;</span><br><span class="line">import Vuex from &#39;vuex&#39;</span><br><span class="line">Vue.use(Vuex)</span><br><span class="line">const state &#x3D; &#123;</span><br><span class="line">  count:0,</span><br><span class="line">  aaa:0</span><br><span class="line">&#125;</span><br><span class="line">const mutations &#x3D; &#123;</span><br><span class="line">  jia(state)&#123;</span><br><span class="line">    state.count++</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const getters &#x3D; &#123;</span><br><span class="line">  count:() &#x3D;&gt; &#123;</span><br><span class="line">    return state.count +&#x3D; 100</span><br><span class="line">  &#125;,</span><br><span class="line">  aaa: () &#x3D;&gt; &#123;</span><br><span class="line">    return state.aaa +&#x3D; 50</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const actions &#x3D; &#123;</span><br><span class="line">  addAction(context)&#123;</span><br><span class="line">    setTimeout(()&#x3D;&gt;&#123;</span><br><span class="line">      context.commit(&#39;jia&#39;,10)</span><br><span class="line">    &#125;,2000)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">  state,</span><br><span class="line">  mutations,</span><br><span class="line">  getters,</span><br><span class="line">  actions</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
 
-<p>js使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import &#123;mapState,mapMutations,mapGetters,mapActions&#125; from &#39;vuex&#39;</span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &#39;App&#39;,</span><br><span class="line">    data()&#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        mag:&#39;vuex初体验&#39;,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed:&#123;</span><br><span class="line">      ...mapState([&#39;count&#39;,&#39;aaa&#39;]),</span><br><span class="line">      ...mapGetters([&quot;count&quot;]),</span><br><span class="line">      sum:function()&#123;</span><br><span class="line">        return this.count + this.aaa</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">      ...mapMutations([&#39;jia&#39;]),</span><br><span class="line">      ...mapActions([&#39;addAction&#39;])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="vueRouter"><a href="#vueRouter" class="headerlink" title="vueRouter"></a>vueRouter</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#39;vue&#39;</span><br><span class="line">import Router from &#39;vue-router&#39;</span><br><span class="line">&#x2F;&#x2F; import HelloWorld from &#39;@&#x2F;components&#x2F;HelloWorld&#39;</span><br><span class="line">import rank from &#39;..&#x2F;components&#x2F;rank&#39;</span><br><span class="line">import recommend from &#39;..&#x2F;components&#x2F;recommend&#39;</span><br><span class="line">import search from &#39;..&#x2F;components&#x2F;search&#39;</span><br><span class="line">import singer from &#39;..&#x2F;components&#x2F;singer&#39;</span><br><span class="line">import aa from &#39;..&#x2F;components&#x2F;aa&#39;</span><br><span class="line">import bb from &#39;..&#x2F;components&#x2F;bb&#39;</span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line">export default new Router(&#123;</span><br><span class="line">  mode:&#39;history&#39;,</span><br><span class="line">  base:__dirname,</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;&#39;,</span><br><span class="line">      redirect:&#39;&#x2F;recommend&#x2F;aa&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;rank&#39;,</span><br><span class="line">      name: &#39;rank&#39;,</span><br><span class="line">      component: rank</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;recommend&#39;,</span><br><span class="line">      name: &#39;recommend&#39;,</span><br><span class="line">      component: recommend,</span><br><span class="line">      children:[</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">          path:&#39;&#x2F;recommend&#x2F;aa&#39;,</span><br><span class="line">          name:&#39;aa&#39;,</span><br><span class="line">          component:aa</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          path:&#39;&#x2F;recommend&#x2F;bb&#39;,</span><br><span class="line">          name:&#39;bb&#39;,</span><br><span class="line">          component:bb</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;search&#x2F;:a&#x2F;:b&#39;,</span><br><span class="line">      name: &#39;search&#39;,</span><br><span class="line">      component: search</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;singer&#39;,</span><br><span class="line">      name: &#39;singer&#39;,</span><br><span class="line">      component: singer</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;navbar&quot;&gt;</span><br><span class="line">     &lt;router-link :to&#x3D;&quot;&#123;name:&#39;recommend&#39;,params:&#123;romeid:romeId&#125;&#125;&quot; class&#x3D;&quot;recommend&quot;&gt;推荐&lt;&#x2F;router-link&gt;</span><br><span class="line">     &lt;router-link  :to&#x3D;&quot;&#123;path:&#39;&#x2F;singer&#39;,query:&#123;id:123&#125;&#125;&quot; class&#x3D;&quot;singer&quot;&gt;歌手&lt;&#x2F;router-link&gt;</span><br><span class="line">     &lt;router-link   :to&#x3D;&quot;&#123;path:&#39;&#x2F;siranknger&#39;&#125;&quot; class&#x3D;&quot;rank&quot;&gt;排行&lt;&#x2F;router-link&gt;</span><br><span class="line">     &lt;router-link  :to&#x3D;&quot;&#123;path:&#39;&#x2F;search&#x2F;111&#x2F;222&#39;&#125;&quot; class&#x3D;&quot;search&quot;&gt;搜索&lt;&#x2F;router-link&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-
-<pre><code>vueRoter  传参
-query   path + query
-params  name + params
-
-url传参   路由接受  params 参数
-
-
-alias  别名 给路由起个名</code></pre><h2 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h2><p>vueRouter</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">  path: &#39;*&#39;,</span><br><span class="line">  component: page404</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="vueRouter-钩子"><a href="#vueRouter-钩子" class="headerlink" title="vueRouter 钩子"></a>vueRouter 钩子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">      path: &#39;&#x2F;home&#39;,</span><br><span class="line">      name: &#39;home&#39;,</span><br><span class="line">      component: home,</span><br><span class="line">      beforeEnter:(to,from,next) &#x3D;&gt; &#123;</span><br><span class="line">          &#x2F;&#x2F;to 去的路由</span><br><span class="line">          &#x2F;&#x2F;from 现在得路由</span><br><span class="line">          &#x2F;&#x2F; next()继续执行 不加不执行</span><br><span class="line">          &#x2F;&#x2F;next(&#123;path:&#39;&#x2F;aaa&#39;&#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">       beforeLeave:(to,from,next) &#x3D;&gt; &#123;</span><br><span class="line">          &#x2F;&#x2F;to 去的路由</span><br><span class="line">          &#x2F;&#x2F;from 现在得路由</span><br><span class="line">          &#x2F;&#x2F; next()继续执行 不加不执行</span><br><span class="line">          &#x2F;&#x2F;next(&#123;path:&#39;&#x2F;aaa&#39;&#125;)</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="js-改变路由"><a href="#js-改变路由" class="headerlink" title="js 改变路由"></a>js 改变路由</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">router.go(-1)</span><br><span class="line">router.go(1)</span><br><span class="line">router.push(&#39;&#x2F;home&#39;)</span><br><span class="line">router.push(&#123;path:&#39;&#x2F;home&#39;,query:&#123;aa:0&#125;)</span><br><span class="line">router.push(&#123;name:&#39;home&#39;,params:&#123;aa:0&#125;)</span><br><span class="line"></span><br><span class="line">这边不可以改变component 不能设置模板</span><br></pre></td></tr></table></figure>
-            </div>
-        </article>
+    <!-- custom head -->
     
-        <article class="post article-entry">
-            <div class="post-title">
-                <a class="post-title-link text-underline" href="/2020/05/07/vue-update/">vue上线前的工作</a>
-            </div>
-            <p class="sub">5月 07 2020</p>
-            <div class="post-content">
-                <h3 id="1-去取项目js-map"><a href="#1-去取项目js-map" class="headerlink" title="1.  去取项目js.map"></a>1.  去取项目js.map</h3><p>config -&gt; index.js</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  dev: &#123;</span><br><span class="line">       &#x2F;&#x2F; .........</span><br><span class="line">  &#125;,</span><br><span class="line">  build: &#123;</span><br><span class="line">        &#x2F;&#x2F;.....</span><br><span class="line">    productionSourceMap: true, &#x2F;&#x2F;改为false</span><br><span class="line">        &#x2F;&#x2F;.....</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-去除console-log"><a href="#2-去除console-log" class="headerlink" title="2. 去除console.log()"></a>2. 去除console.log()</h3><p> build -&gt; webpack.prod.conf -&gt;  plugins</p>
-<p> 添加  drop_debugger: true,<br>          drop_console: true</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">   &#x2F;&#x2F; http:&#x2F;&#x2F;vuejs.github.io&#x2F;vue-loader&#x2F;en&#x2F;workflow&#x2F;production.html</span><br><span class="line">   new webpack.DefinePlugin(&#123;</span><br><span class="line">     &#39;process.env&#39;: env</span><br><span class="line">   &#125;),</span><br><span class="line">   new UglifyJsPlugin(&#123;</span><br><span class="line">     uglifyOptions: &#123;</span><br><span class="line">       compress: &#123;</span><br><span class="line">         warnings: false,</span><br><span class="line">         &#x2F;&#x2F;todo 此处添加</span><br><span class="line">         drop_debugger: true,</span><br><span class="line">         drop_console: true</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     sourceMap: config.build.productionSourceMap,</span><br><span class="line">     parallel: true</span><br><span class="line">   &#125;),</span><br></pre></td></tr></table></figure>
 
-            </div>
-        </article>
-    
-        <article class="post article-entry">
-            <div class="post-title">
-                <a class="post-title-link text-underline" href="/2020/05/07/home/">vue webpack 打包后animation冲突</a>
-            </div>
-            <p class="sub">5月 07 2020</p>
-            <div class="post-content">
-                <h3 id="动画冲突"><a href="#动画冲突" class="headerlink" title="动画冲突"></a>动画冲突</h3><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>@keyframes的名称被缩写成了a造成冲突</p>
-<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>配置文件发现使用了postcss的cssnano插件压缩css，压缩过程中使用了postcss-reduce-idents插件对自定义的标识符重命名。</p>
-<p>修改配置文件postcss.config.js，plugins属性中增加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#39;postcss-reduce-idents&#39;: &#123;</span><br><span class="line">    keyframes: false,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
-<p>禁止插件对自定义动画名称的重命名。</p>
+<body>
+    <div id="loading" class="active"></div>
 
-            </div>
-        </article>
-    
-</div>
-<div class="side-bar">
-
-
-    <div class="avator" id="avator">
-    <div class="title">
-        <a href="#" class="text-underline">About Me</a>
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">jscheng</h5>
+          <a href="mailto:wangcheng55555@163.com" title="wangcheng55555@163.com" class="mail">wangcheng55555@163.com</a>
+        </hgroup>
+      </div>
     </div>
-        <img src="avator.png" class="ava-img">
-        <h3 class="author">wang cheng</h3>
-        <div class="icon-list">
-        <a href="http://blog.sina.com.cn/blog" target="_blank" rel="noopener"><i class="iconfont icon-weibo icon-item"></i></a>
-        <a href="mailto:wangcheng55555@163.com"><i class="iconfont icon-email icon-item"></i></a>
-        <a href="https://github.com/w493189140" target="_blank" rel="noopener"><i class="iconfont icon-github icon-item"></i></a>
-        <a href="https://github.com/w493189140" target="_blank" rel="noopener"><i class="iconfont icon-linkedin icon-item"></i></a>
-        </div>
-    <div class="tags">
-    <h3 class="tags-title">Tags</h3>
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron/" rel="tag">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a><span class="tag-list-count">1</span></li></ul>
-</div>
-    </div>
-</div>
-
-</section>
-
-
-
-            </main>
-            <div class="copyright">
-  <div class="text">Powered By Hexo | Theme Tsu &copy 2020 jscheng</div>
-</div>
-
-        </div>
-    <div class="back-to-top" id="back-to-top">
-            <i class="iconfont icon-up"></i>
-    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
-    </body>
-    
-<script src="/js/jquery-3.3.1.min.js"></script>
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                类别
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                about
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">jscheng</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header index-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">jscheng</h1>
+        <h5 class="subtitle">
+            
+                
+            
+        </h5>
+    </div>
 
     
-<script src="/js/back-to-top.js"></script>
+
+
+</header>
+
+<div class="container body-wrap">
+
+    <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="post-electron-video"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-13 15:14:21" datetime="2020-05-13T07:14:21.000Z"  itemprop="datePublished">2020-05-13</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+    </div>
 
     
-<script src="/js/scroll.js"></script>
 
-    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    "HTML-CSS": { 
-        preferredFont: "TeX", 
-        availableFonts: ["STIX","TeX"], 
-        linebreaks: { automatic:true }, 
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
-    },
-    tex2jax: { 
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
-        processEscapes: true, 
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {  
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
-        Macros: { href: "{}" } 
-    },
-    messageStyle: "none"
-    }); 
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/13/electron-video/">Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予麦克风、摄像头权限。否则无法调用系统的摄像头、麦克风。如想见详情，可见: Requesting Authorization for Media Capture on macOS
+
+其中 Apple 文档里标注了，如果你想使用麦克风、摄像头权限则需要在 plist 文件里指定相关的属性才可以，如下:
+麦克风: NSMicro...
+    
+
+        <a href="/2020/05/13/electron-video/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/electron/" rel="tag">electron</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-react-cli"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-09 14:01:13" datetime="2020-05-09T06:01:13.000Z"  itemprop="datePublished">2020-05-09</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/09/react-cli/">react 初始化项目配置 @/、less、vw</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        @/webpack.config.jsresolve ===&gt; alias ===&gt; 添加 ‘@’:paths.appSrc
+123456789101112131415alias: &#123;       &#x2F;&#x2F; Support React Native Web       &#x2F;&#x2F; https:&#x2F;&#x2F;www.smashing...
+    
+
+        <a href="/2020/05/09/react-cli/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/" rel="tag">react</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-vue-vw"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-09 13:59:02" datetime="2020-05-09T05:59:02.000Z"  itemprop="datePublished">2020-05-09</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/09/vue-vw/">vue  vw 配置</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        vw 配置1cnpm i postcss-import postcss-url autoprefixer less less-loader postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext cssnano postcss-viewport-units -S
+.postcssrc...
+    
+
+        <a href="/2020/05/09/vue-vw/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-git"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-09 13:49:58" datetime="2020-05-09T05:49:58.000Z"  itemprop="datePublished">2020-05-09</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/09/git/">git基本使用</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Git什么是Git?
+Git是一款源代码管理工具(版本控制工具)
+我们写的代码需要使用Git进行管理。
+
+
+
+1.0是稳定2.0加了新功能
+
+源代码有必要管理起吗？
+有必要，因为人工的去处理不同的版本，做相应备份会很麻烦。
+svn,vss,vcs,tfs…..
+Git是linux之父当年为了维护linux—linus之前也是手动维护合并把文件发给Linus
+BitKeeper(收费)
+有人想...
+    
+
+        <a href="/2020/05/09/git/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-electron-win7-error"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-09 10:39:24" datetime="2020-05-09T02:39:24.000Z"  itemprop="datePublished">2020-05-09</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E9%97%AE%E7%AD%94/">问答</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/09/electron-win7-error/">electron打包应用在win7无法启动解决方案</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        问题 1：win7兼容electron打包后的app，在win7的某些电脑（非管理员的情况下有一定概率出现）双击软件安装后生成的快捷方式，然后啥事情也没有发生，但是打开控制台可以看到应用的进程启动一下然后快速被关掉。 解决方法：
+1. 方法一：软件的兼容性问题，可能是有些电脑的系统比较古老，
+和electron有兼容性问题，更新electron版本比较容易有其他问题，
+解决方法是以兼容模式启...
+    
+
+        <a href="/2020/05/09/electron-win7-error/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/electron/" rel="tag">electron</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-vue-router"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-07 14:28:45" datetime="2020-05-07T06:28:45.000Z"  itemprop="datePublished">2020-05-07</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/07/vue-router/">vueRouter 设置</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        去掉hash的#12345export default new Router(&#123;  hashbang: false,  mode: &#39;history&#39;,  routes: []  &#125;)
+hashbang默认值： true只在 hash 模式下可用当 hashbang 值为 true 时，所有的路径都会被格式化为以 #! 开头。例如 router.go(‘/...
+    
+
+        <a href="/2020/05/07/vue-router/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-vue-update"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-07 14:25:53" datetime="2020-05-07T06:25:53.000Z"  itemprop="datePublished">2020-05-07</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/07/vue-update/">vue上线前的工作</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        1.  去取项目js.mapconfig -&gt; index.js
+12345678910module.exports &#x3D; &#123;  dev: &#123;       &#x2F;&#x2F; .........  &#125;,  build: &#123;        &#x2F;&#x2F;.....    productionSourceMap: true, ...
+    
+
+        <a href="/2020/05/07/vue-update/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-home"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-07 14:22:13" datetime="2020-05-07T06:22:13.000Z"  itemprop="datePublished">2020-05-07</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E9%97%AE%E7%AD%94/">问答</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/07/home/">vue webpack 打包后animation冲突</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        动画冲突原因：@keyframes的名称被缩写成了a造成冲突
+解决办法配置文件发现使用了postcss的cssnano插件压缩css，压缩过程中使用了postcss-reduce-idents插件对自定义的标识符重命名。
+修改配置文件postcss.config.js，plugins属性中增加
+123&#39;postcss-reduce-idents&#39;: &#123;    key...
+    
+
+        <a href="/2020/05/07/home/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+    </ul>
+
+    
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+       <!-- <p>
+            
+            <span>博客内容遵循</span>
+        </p>-->
+    </div>
+    <div class="bottom">
+        <p><span>jscheng &copy; 2020</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">鲁ICP备18022674号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://w493189140.gitee.io/blog/&title=jscheng&pic=https://w493189140.gitee.io/blog/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://w493189140.gitee.io/blog/&title=jscheng&source=jscheng 的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://w493189140.gitee.io/blog/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=jscheng&url=https://w493189140.gitee.io/blog/&via=https://w493189140.gitee.io/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://w493189140.gitee.io/blog/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://w493189140.gitee.io/blog/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
 </script>
-<!-- 给MathJax元素添加has-jax class -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '哪去了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'jscheng';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
         }
     });
-</script>
-<!-- 通过连接CDN加载MathJax的js代码 -->
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+})();
 </script>
 
+
+
+</body>
 </html>

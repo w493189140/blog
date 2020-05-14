@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: JS_Cheng
+title: jscheng
 subtitle: ''
 description: 'jscheng 的博客'
 keywords: 'jscheng,博客,阳光喔,阳光语文'
-author: wang cheng
+author: jscheng
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://w493189140.gitee.io/blog
-root: /blog
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -93,7 +93,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-Tsu
+#theme: hexo-theme-Tsu
+theme: hexo-theme-indigo-card
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

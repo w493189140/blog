@@ -2,6 +2,7 @@
 title: vue  vw 配置
 date: 2020-05-09 13:59:02
 tags: vue
+categories: 教程
 ---
 ## vw 配置
 ```

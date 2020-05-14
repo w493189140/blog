@@ -2,6 +2,7 @@
 title: vue上线前的工作
 date: 2020-05-07 14:25:53
 tags: vue
+categories: 教程
 ---
 
 ### 1.  去取项目js.map

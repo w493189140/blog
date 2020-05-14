@@ -2,6 +2,7 @@
 title: vueRouter 设置
 date: 2020-05-07 14:28:45
 tags: vue
+categories: 教程
 ---
 
 ### 去掉hash的#
