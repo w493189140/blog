@@ -29,17 +29,17 @@
     <meta name="description" content="macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予麦克风、摄像头权限。否则无法调用系统的摄像头、麦克风。如想见详情，可见: Requesting Authorization for Media Capture on macOS  其中 Apple 文档里标注了，如果你想使用麦克风、摄像头权限则需要在 plist 文件里指定相关的属性才可以，如下: 麦克风: NSMicropho">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南">
-<meta property="og:url" content="https://w493189140.gitee.io/blog/2020/05/13/electron-video/index.html">
+<meta property="og:url" content="https://www.jscheng.top/2020/05/13/electron-video/index.html">
 <meta property="og:site_name" content="jscheng">
 <meta property="og:description" content="macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予麦克风、摄像头权限。否则无法调用系统的摄像头、麦克风。如想见详情，可见: Requesting Authorization for Media Capture on macOS  其中 Apple 文档里标注了，如果你想使用麦克风、摄像头权限则需要在 plist 文件里指定相关的属性才可以，如下: 麦克风: NSMicropho">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://w493189140.gitee.io/image/demo.jpg">
+<meta property="og:image" content="https://www.jscheng.top/image/demo.jpg">
 <meta property="article:published_time" content="2020-05-13T07:14:21.000Z">
 <meta property="article:modified_time" content="2020-05-14T06:23:43.269Z">
 <meta property="article:author" content="jscheng">
 <meta property="article:tag" content="electron">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://w493189140.gitee.io/image/demo.jpg">
+<meta name="twitter:image" content="https://www.jscheng.top/image/demo.jpg">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -51,6 +51,11 @@
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
+    <style>
+        .container{
+            width: 1200px;
+        }
+    </style>
     <div id="loading" class="active"></div>
 
     <aside id="menu" class="hide" >
@@ -119,16 +124,6 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
         
         
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
@@ -251,12 +246,10 @@ macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予�
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2020/05/13/electron-video/" target="_blank" rel="external">https://w493189140.gitee.io/blog/2020/05/13/electron-video/</a>
-        
     </div>
     
     <footer>
-        <a href="https://w493189140.gitee.io/blog">
+        <a href="https://www.jscheng.top">
             <img src="/img/avatar.png" alt="jscheng">
             jscheng
         </a>
@@ -282,7 +275,7 @@ macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予�
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://w493189140.gitee.io/blog/2020/05/13/electron-video/&title=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&pic=https://w493189140.gitee.io/blog/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/05/13/electron-video/&title=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -292,25 +285,25 @@ macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予�
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://w493189140.gitee.io/blog/2020/05/13/electron-video/&title=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/05/13/electron-video/&title=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&source=jscheng 的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://w493189140.gitee.io/blog/2020/05/13/electron-video/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&url=https://w493189140.gitee.io/blog/2020/05/13/electron-video/&via=https://w493189140.gitee.io/blog" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://w493189140.gitee.io/blog/2020/05/13/electron-video/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/05/13/electron-video/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&url=https://www.jscheng.top/2020/05/13/electron-video/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/05/13/electron-video/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
     </ul>
  </div>
 
@@ -327,7 +320,14 @@ macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予�
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/05/19/electron-mac-setup/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">mac版软件下载及安装</h4>
+      </a>
+    </div>
   
 
   
@@ -448,7 +448,7 @@ macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予�
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://w493189140.gitee.io/blog/2020/05/13/electron-video/&title=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&pic=https://w493189140.gitee.io/blog/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/05/13/electron-video/&title=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -458,25 +458,25 @@ macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予�
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://w493189140.gitee.io/blog/2020/05/13/electron-video/&title=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/05/13/electron-video/&title=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&source=jscheng 的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://w493189140.gitee.io/blog/2020/05/13/electron-video/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&url=https://w493189140.gitee.io/blog/2020/05/13/electron-video/&via=https://w493189140.gitee.io/blog" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://w493189140.gitee.io/blog/2020/05/13/electron-video/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/05/13/electron-video/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Electron App 在 MacOS 下 申请摄像头及麦克风权限踩坑指南》 — jscheng&url=https://www.jscheng.top/2020/05/13/electron-video/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/05/13/electron-video/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
     </ul>
  </div>
 
@@ -484,7 +484,7 @@ macOS 10.14 及以上版本，开发者必须对其自己的应用明确授予�
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://w493189140.gitee.io/blog/2020/05/13/electron-video/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://www.jscheng.top/2020/05/13/electron-video/" alt="微信分享二维码">
 </div>
 
 
@@ -498,26 +498,6 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 </script>
 
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
