@@ -133,6 +133,20 @@ plugins: () => [
         postcssNormalize(),
     ],
 ```
+# react-router-dom
+```
+import { BrowserRouter as Router, Route, Link ,NavLink,Redirect,Switch} from 'react-router-dom'
+<Router>
+    <Link to='/'>xxx</Link>
+    <NavLink activeClassName="xxxx" to='/xxx'>xxx</NavLink>
+    <Switch>
+         <Redirect from="/xxxx" to="/xxx" />
+         <Route path='/xxx' exact component={xxxx} />
+    </Switch>
+</Router>
+
+//js ==> props.history.push('/home')
+```
 
 # redux
 ```

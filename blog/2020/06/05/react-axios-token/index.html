@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?48711b05b1c1178a5b74ec9dcd75c600"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    <meta name="baidu-site-verification" content="d0GGaTdNRH" />
+    
+    
+    
+    
+    <title>对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转 | jscheng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <!--<meta name="keywords" content="react">-->
+    <meta name="keywords" content="对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转 | jscheng">
+
+    <meta name="description" content="web前端,jscheng,blog,jscheng的博客，JSCheng">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转">
+<meta property="og:url" content="https://www.jscheng.top/2020/06/05/react-axios-token/index.html">
+<meta property="og:site_name" content="jscheng">
+<meta property="og:description" content="web前端,jscheng,blog,jscheng的博客，JSCheng">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-05T02:58:03.000Z">
+<meta property="article:modified_time" content="2020-06-05T03:03:10.715Z">
+<meta property="article:author" content="jscheng">
+<meta property="article:tag" content="react">
+<meta name="twitter:card" content="summary">
+
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <style>
+        .container{
+            width: 1200px;
+        }
+    </style>
+    <img src="https://jscheng-img.oss-cn-shanghai.aliyuncs.com/logo.png" alt="logo" hidden>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">jscheng</h5>
+          <a href="mailto:wangcheng55555@163.com" title="wangcheng55555@163.com" class="mail">wangcheng55555@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                类别
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                about
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-06-05T02:58:03.000Z" itemprop="datePublished" class="page-time">
+  2020-06-05
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-react-axios-token"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-06-05 10:58:03" datetime="2020-06-05T02:58:03.000Z"  itemprop="datePublished">2020-06-05</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Auth.jsx</span><br><span class="line">export const AuthContext &#x3D; React.createContext(&#123;children&#125;);</span><br><span class="line">export const useAuth &#x3D; ()&#x3D;&gt; React.useContext(AuthContext);</span><br><span class="line">export const AuthProvider &#x3D; (&#123;localStorageKey &#x3D; &quot;token&quot;, children &#125;)&#x3D;&gt; &#123;</span><br><span class="line">   const [token, setToken] &#x3D; React.useState(()&#x3D;&gt; localStorage.getItem(localStorageKey)||&quot;&quot;);</span><br><span class="line">   const saveToken &#x3D; React.useCallback((v)&#x3D;&gt; &#123;</span><br><span class="line">       localStorage.setItem(localStorageKey, JSON.stringify(v));</span><br><span class="line">      setToken(v);</span><br><span class="line">   &#125;, [localStorageKey])</span><br><span class="line">   const [isLogin, setIsLogin] &#x3D; React.useState(false);</span><br><span class="line">   const login &#x3D; React.useCallback((nextToken)&#x3D;&gt; &#123;</span><br><span class="line">      setIsLogin(true);</span><br><span class="line">      saveToken(nextToken)</span><br><span class="line">   &#125;, []);</span><br><span class="line">   const logout &#x3D; React.useCallback(()&#x3D;&gt; &#123;</span><br><span class="line">      setIsLogin(false);</span><br><span class="line">      saveToken(&quot;&quot;)</span><br><span class="line">   &#125;, [])</span><br><span class="line">   const value &#x3D; &#123; token, saveToken, login, logout, isLogin &#125;</span><br><span class="line">   return &lt;AuthContext.Provider value&#x3D;&#123;value&#125; children&#x3D;&#123;children&#125; &#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; ajax.jsx</span><br><span class="line">import &#123; useAuth &#125; from &quot;.&#x2F;Auth&quot;</span><br><span class="line">import axios from &quot;axios&quot;</span><br><span class="line">const AjaxContext &#x3D; React.createContext();</span><br><span class="line">export const useAjax &#x3D; ()&#x3D;&gt; React.useContext(AjaxContext);</span><br><span class="line">export function AjaxProvider(&#123;timeout, baseURL, children&#125;)&#123;</span><br><span class="line">    const instance &#x3D; React.useMemo(()&#x3D;&gt; axios.create(&#123;timeout, baseURL&#125;), [timeout, baseURL]);</span><br><span class="line">    const &#123;isLogin, saveToken, token&#125; &#x3D; useAuth();</span><br><span class="line">    React.useEffect(()&#x3D;&gt; &#123;</span><br><span class="line">      &#x2F;&#x2F; request 拦截器</span><br><span class="line">      const onError &#x3D; (err)&#x3D;&gt; Promise.reject(err)</span><br><span class="line">      const onRequest &#x3D; (config)&#x3D;&gt; &#123;</span><br><span class="line">            if (token) &#123;</span><br><span class="line">               config.headers.Authorization &#x3D; &#96;Bearer $&#123;token&#125;&#96;;</span><br><span class="line">           &#125;</span><br><span class="line">           return config;</span><br><span class="line">      &#125;</span><br><span class="line">      const flag &#x3D; axios.interceptors.request.use(onRequest, onError);</span><br><span class="line">      return ()&#x3D;&gt; instance.interceptors.request.eject(flag)</span><br><span class="line">    &#125;, [instance, isLogin, token])</span><br><span class="line">   React.useEffect(()&#x3D;&gt; &#123;</span><br><span class="line">      const onResp &#x3D; (res)&#x3D;&gt; res</span><br><span class="line">      const onError &#x3D; (error)&#x3D;&gt; &#123;</span><br><span class="line">           if (err.response) &#123;</span><br><span class="line">               if (error.response.status &#x3D;&#x3D;&#x3D; 401)&#123; saveToken(&quot;&quot;) &#125;</span><br><span class="line">               Message.error(error.response.data.message || &quot;服务器异常&quot;);</span><br><span class="line">           &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      const flag &#x3D; axios.interceptors.response.use(onResp, onError);</span><br><span class="line">      return ()&#x3D;&gt; instance.interceptors.response.eject(flag)</span><br><span class="line">   &#125;, [instance, saveToken])</span><br><span class="line">   const ajax &#x3D; React.useCallback((params)&#x3D;&gt; &#123;</span><br><span class="line">      const onSuccess &#x3D; res&#x3D;&gt; params.success &amp;&amp; params.success(res);</span><br><span class="line">      const onError &#x3D; err&#x3D;&gt; params.error &amp;&amp; params.error(err);</span><br><span class="line">      return instance(&#123;</span><br><span class="line">            method: params.method.toLowerCase(),</span><br><span class="line">            url: &#96;$&#123;axios.defaults.baseURL&#125;$&#123;params.url&#125;&#96;,</span><br><span class="line">            data: params.method !&#x3D;&#x3D; &quot;get&quot; ? params.data : &quot;&quot;,</span><br><span class="line">            params: params.method &#x3D;&#x3D;&#x3D; &quot;get&quot; ? params.data : &quot;&quot;,</span><br><span class="line">            responseType: params.file ? &quot;blob&quot; : &quot;&quot;</span><br><span class="line">      &#125;).then(onSuccess, onError)</span><br><span class="line">   &#125;, [instance]);</span><br><span class="line">   const value &#x3D; &#123; ajax, axios: instance &#125;</span><br><span class="line">   return &lt;AjaxContext.Provider value&#x3D;&#123;value&#125; children&#x3D;&#123;children&#125; &#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; ProductPage.jsx</span><br><span class="line">import &#123; useAjax &#125; from &quot;.&#x2F;Ajax&quot;</span><br><span class="line">export function ProductPage(&#123;match: &#123; params: &#123; id &#125; &#125;&#125;)&#123;</span><br><span class="line">    const &#123; ajax &#125; &#x3D; useAjax();</span><br><span class="line">    const [data, setData] &#x3D; React.useState(null);</span><br><span class="line">    const [error, setError] &#x3D; React.useState(null);</span><br><span class="line">    React.useEffect(()&#x3D;&gt; &#123;</span><br><span class="line">       ajax(&#123;url: &#96;&#x2F;product&#x2F;$&#123;id&#125;&#96;, error: setError, success: (res)&#x3D;&gt; setData(res.data)&#125;)</span><br><span class="line">    &#125;, [id])</span><br><span class="line">    return (</span><br><span class="line">       &lt;&gt;</span><br><span class="line">          &#123;!error &amp;&amp; !data &amp;&amp; &lt;Loading &#x2F;&gt; &#125;</span><br><span class="line">          &#123;error &amp;&amp; &lt;ErrorDisplayer error&#x3D;&#123;error&#125;&#x2F;&gt;&#125;</span><br><span class="line">          &#123;data &amp;&amp; &lt;DataDsplayer data&#x3D;&#123;data&#125;&#125;&#x2F;&gt;&#125;</span><br><span class="line">       &lt;&#x2F;&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; index.jsx</span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;AuthProvider localStorageKey&#x3D;&quot;fake_token&quot;&gt;</span><br><span class="line">     &lt;AjaxProvider baseURL&#x3D;&quot;&#x2F;api&quot; timeout&#x3D;&#123;30000&#125;&gt;</span><br><span class="line">       &lt;BrowserRouter&gt;</span><br><span class="line">          &lt;Application &#x2F;&gt;</span><br><span class="line">       &lt;&#x2F;BrowserRouter&gt;</span><br><span class="line">     &lt;&#x2F;AjaxProvider&gt;</span><br><span class="line">  &lt;&#x2F;AuthProvider&gt;</span><br><span class="line">, ROOT_DOM)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Application.jsx</span><br><span class="line">import &#123;useAuth&#125; from &quot;.&#x2F;useAuth&quot;;</span><br><span class="line">export function Application()&#123;</span><br><span class="line">     return (</span><br><span class="line">        &lt;Switch&gt;</span><br><span class="line">           &lt;Route path&#x3D;&quot;&#x2F;home&quot; component&#x3D;&#123;HomePage&#125; &#x2F;&gt;</span><br><span class="line">           &lt;Route path&#x3D;&quot;&#x2F;login&quot; component&#x3D;&#123;LoginPage&#125; &#x2F;&gt;</span><br><span class="line">           &lt;AuthRoute path&#x3D;&quot;&#x2F;product&#x2F;:id&quot; component&#x3D;&#123;ProductPage&#125; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Switch&gt;</span><br><span class="line">     )</span><br><span class="line">&#125;</span><br><span class="line">function LoginRedirect(props) &#123;</span><br><span class="line">   &#x2F;&#x2F; 你确定 state 有用吗, 我没看到有这个api.....,</span><br><span class="line">   &#x2F;&#x2F; 觉得还是把url改成 &#96;&#x2F;login?redirect&#x3D;$&#123;encodeURLComponent(location.href)&#125;&#96;</span><br><span class="line">   &#x2F;&#x2F; 这种方式会好点, 在login成功后分析url来处理</span><br><span class="line">   return &lt;Redirect path&#x3D;&quot;&#x2F;login&quot; state&#x3D;&#123;&#123;from: props.location&#125;&#125; &#x2F;&gt;</span><br><span class="line">&#125;</span><br><span class="line">function AuthRoute &#x3D; (props)&#x3D;&gt; &#123;</span><br><span class="line">   const &#123; token, isLogin &#125; &#x3D; useAuth();</span><br><span class="line">   const component &#x3D; !token || !isLogin ? LoginRedirect : props.component;</span><br><span class="line">   return &lt;Route &#123;...props&#125; component&#x3D;&#123;component&#125; &#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上都是裸写的， 大概跑步通，意思就是这个意思，还有，typescript大法好，你有空可以学学。<br>还有就是我比较喜欢用 useApi,<br>const { getProduct, removeProduct } = useApi();<br>这种，直接封装干净，然后，在开发阶段可以做mock</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const sleep &#x3D; (ms)&#x3D;&gt; new Promise(r&#x3D;&gt; setTimeout(r, ms))</span><br><span class="line">export function MockApiProvider(&#123;delay &#x3D; 400&#125;)&#123;</span><br><span class="line">    const getProduct &#x3D; async (id)&#x3D;&gt; &#123;</span><br><span class="line">        await sleep(delay);</span><br><span class="line">        return &#123; id, name: &quot;mock product name&quot; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    const removeProduct &#x3D; ()&#x3D;&gt; sleep(delay).then(()&#x3D;&gt; throw new Error(&quot;权限不足不能删除&quot;))</span><br><span class="line">    return &lt;ApiContext.Provider value&#x3D;&#123;&#123;getProduct, removeProduct&#125;&#125; children&#x3D;&#123;children&#125;&#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-06-05T03:03:10.715Z" itemprop="dateUpdated">2020-06-05 11:03:10</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://www.jscheng.top">
+            <img src="/img/avatar.png" alt="jscheng">
+            jscheng
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/" rel="tag">react</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/06/05/react-axios-token/&title=《对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/06/05/react-axios-token/&title=《对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/06/05/react-axios-token/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转》 — jscheng&url=https://www.jscheng.top/2020/06/05/react-axios-token/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/06/05/react-axios-token/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/06/02/react-init/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">creat-react-app 配置</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "hgOSdOMMl0QDNQ9A5Dd0BV74-gzGzoHsz",
+            appKey: "6gJhVhXHxUAUmo2qsoqpUFpi",
+            avatar: "mm",
+            placeholder: "请输入",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+       <!-- <p>
+            
+            <span>博客内容遵循</span>
+        </p>-->
+    </div>
+    <div class="bottom">
+        <p><span>jscheng &copy; 2020</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">鲁ICP备18022674号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/06/05/react-axios-token/&title=《对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/06/05/react-axios-token/&title=《对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/06/05/react-axios-token/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转》 — jscheng&url=https://www.jscheng.top/2020/06/05/react-axios-token/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/06/05/react-axios-token/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://www.jscheng.top/2020/06/05/react-axios-token/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '哪去了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'jscheng';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

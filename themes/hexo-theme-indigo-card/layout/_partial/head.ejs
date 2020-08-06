@@ -3,6 +3,7 @@
     <%- partial('plugins/tajs') %>
     <%- partial('plugins/baidu') %>
     <meta charset="utf-8">
+    <meta name="baidu-site-verification" content="d0GGaTdNRH" />
     <% if(theme.google_site_verification){ %>
     <meta name="google-site-verification" content="<%- theme.google_site_verification%>">
     <% }%>
@@ -45,8 +46,11 @@
             });
     }
     %>
-    <meta name="keywords" content="<%= keyWords %>">
-    <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+    <!--<meta name="keywords" content="<%= keyWords %>">-->
+    <meta name="keywords" content="<% if (title){ %><%= title %> | <% } %><%= config.title %><% if (config.subtitle){ %> | <%= config.subtitle %><% } %>">
+
+    <%- open_graph({title :page.title,description: 'web前端,jscheng,blog,jscheng的博客，JSCheng',type :'blog'}) %>
+
     <% if ((config.feed) && (config.feed.path.length)) { %>
         <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%- url_for(config.feed.path) %>">
     <% } %>
