@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?48711b05b1c1178a5b74ec9dcd75c600"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    <meta name="baidu-site-verification" content="d0GGaTdNRH" />
+    
+    
+    
+    
+    <title>面试笔记 | jscheng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <!--<meta name="keywords" content="面试">-->
+    <meta name="keywords" content="面试笔记 | jscheng">
+
+    <meta name="description" content="web前端,jscheng,blog,jscheng的博客，JSCheng">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="面试笔记">
+<meta property="og:url" content="https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="jscheng">
+<meta property="og:description" content="web前端,jscheng,blog,jscheng的博客，JSCheng">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-16T11:55:42.000Z">
+<meta property="article:modified_time" content="2020-11-16T13:43:57.716Z">
+<meta property="article:author" content="jscheng">
+<meta property="article:tag" content="面试">
+<meta name="twitter:card" content="summary">
+
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <style>
+        .container{
+            /* width: 1200px; */
+        }
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+    <img src="https://jscheng-img.oss-cn-shanghai.aliyuncs.com/logo.png" alt="logo" hidden>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">jscheng</h5>
+          <a href="mailto:wangcheng55555@163.com" title="wangcheng55555@163.com" class="mail">wangcheng55555@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                类别
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                about
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">面试笔记</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">面试笔记</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-11-16T11:55:42.000Z" itemprop="datePublished" class="page-time">
+  2020-11-16
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包"><span class="post-toc-number">1.</span> <span class="post-toc-text">闭包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#垃圾回收机制"><span class="post-toc-number">2.</span> <span class="post-toc-text">垃圾回收机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js-设计模式"><span class="post-toc-number">3.</span> <span class="post-toc-text">js 设计模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#防抖-节流-Promise"><span class="post-toc-number">4.</span> <span class="post-toc-text">防抖 节流 Promise</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自我介绍"><span class="post-toc-number">5.</span> <span class="post-toc-text">自我介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚拟DOM"><span class="post-toc-number">6.</span> <span class="post-toc-text">虚拟DOM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍一下Vue中的Diff算法"><span class="post-toc-number">7.</span> <span class="post-toc-text">介绍一下Vue中的Diff算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#key属性的作用是什么"><span class="post-toc-number">8.</span> <span class="post-toc-text">key属性的作用是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue的响应式系统"><span class="post-toc-number">9.</span> <span class="post-toc-text">Vue的响应式系统</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#computed与watch的区别"><span class="post-toc-number">10.</span> <span class="post-toc-text">computed与watch的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍一下Vue的生命周期"><span class="post-toc-number">11.</span> <span class="post-toc-text">介绍一下Vue的生命周期</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么组件的data必须是一个函数"><span class="post-toc-number">12.</span> <span class="post-toc-text">为什么组件的data必须是一个函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue事件绑定原理说一下"><span class="post-toc-number">13.</span> <span class="post-toc-text">Vue事件绑定原理说一下</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#slot是什么？有什么作用？原理是什么？"><span class="post-toc-number">14.</span> <span class="post-toc-text">slot是什么？有什么作用？原理是什么？</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-面试笔记"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">面试笔记</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-11-16 19:55:42" datetime="2020-11-16T11:55:42.000Z"  itemprop="datePublished">2020-11-16</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p> 有权限访问另一个函数作用域变量的函数叫闭包<br> 三个特点<br> 1 函数嵌套<br> 2 函数内部可以引用函数外部变量<br> 3 参数和变量不被垃圾回收机制回收</p>
+<p> 好处： 保持变量的私有性  缓存变量</p>
+<h3 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h3><p>  垃圾收集齐会定期找出不在使用的变量 然后释放掉<br>  1 标记删除<br>  2 引用计数法</p>
+<h3 id="js-设计模式"><a href="#js-设计模式" class="headerlink" title="js 设计模式"></a>js 设计模式</h3><p>  1 单例执行模式<br>  2 工厂模式<br>  3 构造函数模式<br>  4 订阅发布模式</p>
+<h3 id="防抖-节流-Promise"><a href="#防抖-节流-Promise" class="headerlink" title="防抖 节流 Promise"></a>防抖 节流 Promise</h3><p>  防抖一直触发只执行一次 通过setTimeout 每次执行都清除定时器 只有不触发后才执行一次<br>  节流触发就执行 记录pretime 触发时获取nowtime 减去 pretime &gt; wait  执行操作 反之不执行</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">  &#x2F;&#x2F;防抖</span><br><span class="line">  function debounce(func, wait) &#123;</span><br><span class="line">    let timeout;</span><br><span class="line">    return function () &#123;</span><br><span class="line">        let context &#x3D; this;</span><br><span class="line">        let args &#x3D; arguments;</span><br><span class="line"></span><br><span class="line">        if (timeout) clearTimeout(timeout);</span><br><span class="line">        </span><br><span class="line">        timeout &#x3D; setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">            func.apply(context, args)</span><br><span class="line">        &#125;, wait);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;节流</span><br><span class="line">function throttle(func, wait) &#123;</span><br><span class="line">    let previous &#x3D; 0;</span><br><span class="line">    return function() &#123;</span><br><span class="line">        let now &#x3D; Date.now();</span><br><span class="line">        let context &#x3D; this;</span><br><span class="line">        let args &#x3D; arguments;</span><br><span class="line">        if (now - previous &gt; wait) &#123;</span><br><span class="line">            func.apply(context, args);</span><br><span class="line">            previous &#x3D; now;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; promise</span><br><span class="line"></span><br><span class="line"> function myPromise(callback) &#123; </span><br><span class="line">        &#x2F;&#x2F;callback 代表( resolve,reject ) &#x3D;&gt; &#123;&#125;</span><br><span class="line">        &#x2F;&#x2F; 默认状态pending，首先没有执行成功或失败函数之前状态是pending</span><br><span class="line">        (this.promiseStatus &#x3D; &#39;pending&#39;), this.msg;</span><br><span class="line">　　　　　&#x2F;&#x2F; 用that存当前this的内容</span><br><span class="line">        let that &#x3D; this</span><br><span class="line">        &#x2F;&#x2F; new 自动执行 , 调用callback</span><br><span class="line">        callback(</span><br><span class="line">　　　　　　&#x2F;&#x2F; 定义resolve</span><br><span class="line">          function() &#123;</span><br><span class="line">            &#x2F;&#x2F; 这里面的arguments,this都是坑，他们两个都是坑人大咖，两个都是不定值</span><br><span class="line">            that.promiseStatus &#x3D; &#39;resolved&#39;;</span><br><span class="line">            &#x2F;&#x2F; resolve 的第一个实参</span><br><span class="line">            that.msg &#x3D; arguments[0];</span><br><span class="line">          &#125;,</span><br><span class="line">　　　　　　　&#x2F;&#x2F; 定义reject</span><br><span class="line">          function() &#123;</span><br><span class="line">            that.promiseStatus &#x3D; &#39;rejected&#39;;</span><br><span class="line">            &#x2F;&#x2F; rejected 的第一个实参</span><br><span class="line">            that.msg &#x3D; arguments[0];</span><br><span class="line">          &#125;</span><br><span class="line">        );</span><br><span class="line">      &#125;</span><br><span class="line">      &#x2F;&#x2F; 往myPromise 原型上添加then方法</span><br><span class="line">      myPromise.prototype.then &#x3D; function() &#123;</span><br><span class="line">        &#x2F;&#x2F; 这里的this就是让实例调用，指向实例的，并不是指向构造函数!!! 花式秀this</span><br><span class="line">        if (this.promiseStatus &#x3D;&#x3D; &#39;resolved&#39;) &#123;</span><br><span class="line">          arguments[0](this.msg);</span><br><span class="line">        &#125; else if (this.promiseStatus &#x3D;&#x3D; &#39;rejected&#39;) &#123;</span><br><span class="line">          arguments[1](this.msg);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h3><p>我叫xxx 在xxxx做前端小组长 开发的项目包括web教师端 学生electron端 微信公众号 和 混合开发 H5 部分   工作职责除了写业务逻辑 还负责项目优化和项目上线 项目优化主要是加快浏览器加载速度 优化用户体验 （主要包括路由切换动画 骨架屏 路由懒加载 gzip keep-alive 图片压缩 字体图标使用） 为了方便上线 自己写了一个小工具（jscheng-deploy）</p>
+<p>jscheng-deploy 主要是 第一步执行打包命令  第二部链接ssh node-ssh.connect(config) node-ssh.execCommand() 执行删除命令   node-ssh.putDirectory 上传   成功后断开ssh</p>
+<p>存在： enter-active leave-active  消失 enter leave leave-to</p>
+<h3 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h3><p> dom 结构在js 中的表现形式<br> 用js虚拟dom 树 并渲染dom  对比新老dom树 得到差异对象  把差异对象渲染到dom上<br> key 值是标记节点 为了更好地diff运算 判断新旧vdom是否是同一个对象</p>
+<p>Virtual DOM 是 DOM 节点在 JavaScript 中的一种抽象数据结构，之所以需要虚拟DOM，是因为浏览器中操作DOM的代价比较昂贵，频繁操作DOM会产生性能问题。虚拟DOM的作用是在每一次响应式数据发生变化引起页面重渲染时，Vue对比更新前后的虚拟DOM，匹配找出尽可能少的需要更新的真实DOM，从而达到提升性能的目的。</p>
+<h3 id="介绍一下Vue中的Diff算法"><a href="#介绍一下Vue中的Diff算法" class="headerlink" title="介绍一下Vue中的Diff算法"></a>介绍一下Vue中的Diff算法</h3><p>在新老虚拟DOM对比时</p>
+<p>首先，对比节点本身，判断是否为同一节点，如果不为相同节点，则删除该节点重新创建节点进行替换<br>如果为相同节点，进行patchVnode，判断如何对该节点的子节点进行处理，先判断一方有子节点一方没有子节点的情况(如果新的children没有子节点，将旧的子节点移除)<br>比较如果都有子节点，则进行updateChildren，判断如何对这些新老节点的子节点进行操作（diff核心）。<br>匹配时，找到相同的子节点，递归比较子节点</p>
+<p>在diff中，只对同层的子节点进行比较，放弃跨级的节点比较，使得时间复杂从O(n^3)降低值O(n)，也就是说，只有当新旧children都为多个子节点时才需要用核心的Diff算法进行同层级比较。</p>
+<h3 id="key属性的作用是什么"><a href="#key属性的作用是什么" class="headerlink" title="key属性的作用是什么"></a>key属性的作用是什么</h3><p>在对节点进行diff的过程中，判断是否为相同节点的一个很重要的条件是key是否相等，如果是相同节点，则会尽可能的复用原有的DOM节点。所以key属性是提供给框架在diff的时候使用的，而非开发者。</p>
+<h3 id="Vue的响应式系统"><a href="#Vue的响应式系统" class="headerlink" title="Vue的响应式系统"></a>Vue的响应式系统</h3><p>Vue为MVVM框架，当数据模型data变化时，页面视图会得到响应更新，其原理对data的getter/setter方法进行拦截（Object.defineProperty或者Proxy），利用发布订阅的设计模式，在getter方法中进行订阅，在setter方法中发布通知，让所有订阅者完成响应。<br>在响应式系统中，Vue会为数据模型data的每一个属性新建一个订阅中心作为发布者，而监听器watch、计算属性computed、视图渲染template/render三个角色同时作为订阅者，对于监听器watch，会直接订阅观察监听的属性，对于计算属性computed和视图渲染template/render，如果内部执行获取了data的某个属性，就会执行该属性的getter方法，然后自动完成对该属性的订阅，当属性被修改时，就会执行该属性的setter方法，从而完成该属性的发布通知，通知所有订阅者进行更新。</p>
+<h3 id="computed与watch的区别"><a href="#computed与watch的区别" class="headerlink" title="computed与watch的区别"></a>computed与watch的区别</h3><p>计算属性computed和监听器watch都可以观察属性的变化从而做出响应，不同的是：<br>计算属性computed更多是作为缓存功能的观察者，它可以将一个或者多个data的属性进行复杂的计算生成一个新的值，提供给渲染函数使用，当依赖的属性变化时，computed不会立即重新计算生成新的值，而是先标记为脏数据，当下次computed被获取时候，才会进行重新计算并返回。<br>而监听器watch并不具备缓存性，监听器watch提供一个监听函数，当监听的属性发生变化时，会立即执行该函数。</p>
+<h3 id="介绍一下Vue的生命周期"><a href="#介绍一下Vue的生命周期" class="headerlink" title="介绍一下Vue的生命周期"></a>介绍一下Vue的生命周期</h3><p>beforeCreate：是new Vue()之后触发的第一个钩子，在当前阶段data、methods、computed以及watch上的数据和方法都不能被访问。<br>created：在实例创建完成后发生，当前阶段已经完成了数据观测，也就是可以使用数据，更改数据，在这里更改数据不会触发updated函数。可以做一些初始数据的获取，在当前阶段无法与Dom进行交互，如果非要想，可以通过vm.$nextTick来访问Dom。<br>beforeMount：发生在挂载之前，在这之前template模板已导入渲染函数编译。而当前阶段虚拟Dom已经创建完成，即将开始渲染。在此时也可以对数据进行更改，不会触发updated。<br>mounted：在挂载完成后发生，在当前阶段，真实的Dom挂载完毕，数据完成双向绑定，可以访问到Dom节点，使用$refs属性对Dom进行操作。<br>beforeUpdate：发生在更新之前，也就是响应式数据发生更新，虚拟dom重新渲染之前被触发，你可以在当前阶段进行更改数据，不会造成重渲染。<br>updated：发生在更新完成之后，当前阶段组件Dom已完成更新。要注意的是避免在此期间更改数据，因为这可能会导致无限循环的更新。<br>beforeDestroy：发生在实例销毁之前，在当前阶段实例完全可以被使用，我们可以在这时进行善后收尾工作，比如清除计时器。<br>destroyed：发生在实例销毁之后，这个时候只剩下了dom空壳。组件已被拆解，数据绑定被卸除，监听被移出，子实例也统统被销毁。</p>
+<h3 id="为什么组件的data必须是一个函数"><a href="#为什么组件的data必须是一个函数" class="headerlink" title="为什么组件的data必须是一个函数"></a>为什么组件的data必须是一个函数</h3><p>一个组件可能在很多地方使用，也就是会创建很多个实例，如果data是一个对象的话，对象是引用类型，一个实例修改了data会影响到其他实例，所以data必须使用函数，为每一个实例创建一个属于自己的data，使其同一个组件的不同实例互不影响。</p>
+<h3 id="Vue事件绑定原理说一下"><a href="#Vue事件绑定原理说一下" class="headerlink" title="Vue事件绑定原理说一下"></a>Vue事件绑定原理说一下</h3><p>每一个Vue实例都是一个Event Bus，当子组件被创建的时候，父组件将事件传递给子组件，子组件初始化的时候是有$on方法将事件注册到内部，在需要的时候使用$emit触发函数，而对于原生native事件，使用addEventListener绑定到真实的DOM元素上。</p>
+<h3 id="slot是什么？有什么作用？原理是什么？"><a href="#slot是什么？有什么作用？原理是什么？" class="headerlink" title="slot是什么？有什么作用？原理是什么？"></a>slot是什么？有什么作用？原理是什么？</h3><p>slot又名插槽，是Vue的内容分发机制，组件内部的模板引擎使用slot元素作为承载分发内容的出口。插槽slot是子组件的一个模板标签元素，而这一个标签元素是否显示，以及怎么显示是由父组件决定的。<br>slot又分三类，默认插槽，具名插槽和作用域插槽。</p>
+<p>默认插槽：又名匿名查抄，当slot没有指定name属性值的时候一个默认显示插槽，一个组件内只有有一个匿名插槽。<br>具名插槽：带有具体名字的插槽，也就是带有name属性的slot，一个组件可以出现多个具名插槽。<br>作用域插槽：默认插槽、具名插槽的一个变体，可以是匿名插槽，也可以是具名插槽，该插槽的不同点是在子组件渲染作用域插槽时，可以将子组件内部的数据传递给父组件，让父组件根据子组件的传递过来的数据决定如何渲染该插槽。</p>
+<p>实现原理：当子组件vm实例化时，获取到父组件传入的slot标签的内容，存放在vm.$slot中，默认插槽为vm.$slot.default，具名插槽为vm.$slot.xxx，xxx 为插槽名，当组件执行渲染函数时候，遇到slot标签，使用$slot中的内容进行替换，此时可以为插槽传递数据，若存在数据，则可称该插槽为作用域插槽。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-11-16T13:43:57.716Z" itemprop="dateUpdated">2020-11-16 21:43:57</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://www.jscheng.top">
+            <img src="/img/avatar.png" alt="jscheng">
+            jscheng
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/&title=《面试笔记》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/&title=《面试笔记》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《面试笔记》 — jscheng&url=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/06/05/react-axios-token/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">对axios封装中，在登录token过期，返回401状态码，react-router怎么进行路由跳转</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "hgOSdOMMl0QDNQ9A5Dd0BV74-gzGzoHsz",
+            appKey: "6gJhVhXHxUAUmo2qsoqpUFpi",
+            avatar: "mm",
+            placeholder: "请输入",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+       <!-- <p>
+            
+            <span>博客内容遵循</span>
+        </p>-->
+    </div>
+    <div class="bottom">
+        <p><span>jscheng &copy; 2020</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">鲁ICP备18022674号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/&title=《面试笔记》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/&title=《面试笔记》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《面试笔记》 — jscheng&url=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://www.jscheng.top/2020/11/16/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '哪去了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'jscheng';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
