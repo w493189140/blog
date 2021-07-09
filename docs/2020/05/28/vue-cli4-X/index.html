@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?48711b05b1c1178a5b74ec9dcd75c600"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    <meta name="baidu-site-verification" content="d0GGaTdNRH" />
+    
+    
+    
+    
+    <title>vue-cli4.X 建项目 | jscheng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <!--<meta name="keywords" content="vue">-->
+    <meta name="keywords" content="vue-cli4.X 建项目 | jscheng">
+
+    <meta name="description" content="web前端,jscheng,blog,jscheng的博客，JSCheng">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="vue-cli4.X 建项目">
+<meta property="og:url" content="https://www.jscheng.top/2020/05/28/vue-cli4-X/index.html">
+<meta property="og:site_name" content="jscheng">
+<meta property="og:description" content="web前端,jscheng,blog,jscheng的博客，JSCheng">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-28T07:40:50.000Z">
+<meta property="article:modified_time" content="2021-07-09T05:22:26.097Z">
+<meta property="article:author" content="jscheng">
+<meta property="article:tag" content="vue">
+<meta name="twitter:card" content="summary">
+
+    
+    <link rel="shortcut icon" href="blog/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <style>
+        .container{
+            /* width: 1200px; */
+        }
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+    <img src="https://jscheng-img.oss-cn-shanghai.aliyuncs.com/logo.png" alt="logo" hidden>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(blog/img/brand.jpg)">
+      <div class="brand">
+        <a href="blog/" class="avatar waves-effect waves-circle waves-light">
+          <img src="blog/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">jscheng</h5>
+          <a href="mailto:wangcheng55555@163.com" title="wangcheng55555@163.com" class="mail">wangcheng55555@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                类别
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                about
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vue-cli4.X 建项目</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vue-cli4.X 建项目</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-05-28T07:40:50.000Z" itemprop="datePublished" class="page-time">
+  2020-05-28
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="blog/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#创建项目"><span class="post-toc-number">2.</span> <span class="post-toc-text">创建项目</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#webpack-配置"><span class="post-toc-number">3.</span> <span class="post-toc-text">webpack 配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置环境变量"><span class="post-toc-number">4.</span> <span class="post-toc-text">配置环境变量</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#骨架屏-vue-skeleton-webpack-plugin"><span class="post-toc-number">5.</span> <span class="post-toc-text">骨架屏 vue-skeleton-webpack-plugin</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-vue-cli4-X"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vue-cli4.X 建项目</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-05-28 15:40:50" datetime="2020-05-28T07:40:50.000Z"  itemprop="datePublished">2020-05-28</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="blog/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue&#x2F;cli</span><br><span class="line"># OR</span><br><span class="line">yarn global add @vue&#x2F;cli</span><br><span class="line">&#x2F;&#x2F; 是否ok</span><br><span class="line">vue -V</span><br></pre></td></tr></table></figure>
+<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vue create hello-world</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 拉取 2.x 模板 (旧版本)</span><br><span class="line">npm install -g @vue&#x2F;cli-init</span><br><span class="line">&#x2F;&#x2F; &#96;vue init&#96; 的运行效果将会跟 &#96;vue-cli@2.x&#96; 相同</span><br><span class="line">vue init webpack my-project</span><br></pre></td></tr></table></figure>
+
+<h1 id="webpack-配置"><a href="#webpack-配置" class="headerlink" title="webpack 配置"></a>webpack 配置</h1><p> 安装px2vw autoprefixer</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install postcss-px-to-viewport autoprefixer --save-dev</span><br></pre></td></tr></table></figure>
+
+<p> 根目录下创建 vue.config.js 内容如下<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">const pxtovw &#x3D; require(&#39;postcss-px-to-viewport&#39;);</span><br><span class="line">const autoprefixer &#x3D; require(&#39;autoprefixer&#39;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    publicPath: process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#39;production&#39; ? &#39;&#x2F;&#39; : &#39;&#x2F;&#39;, &#x2F;&#x2F;配置根目录</span><br><span class="line">    outputDir: &#39;dist&#39;,</span><br><span class="line">    productionSourceMap: false,&#x2F;&#x2F;不需要生产环境的 source map，可以将其设置为 false</span><br><span class="line">    configureWebpack: &#123;&#125;, &#x2F;&#x2F;webpack配置</span><br><span class="line">    css: &#123;</span><br><span class="line">        loaderOptions: &#123;</span><br><span class="line">            postcss: &#123;</span><br><span class="line">                plugins: [</span><br><span class="line">                    new autoprefixer(&#123;</span><br><span class="line">                        overrideBrowserslist: [</span><br><span class="line">                          &quot;Android 4.1&quot;,</span><br><span class="line">                          &quot;iOS 7.1&quot;,</span><br><span class="line">                          &quot;Chrome &gt; 31&quot;,</span><br><span class="line">                          &quot;ff &gt; 31&quot;,</span><br><span class="line">                          &quot;ie &gt;&#x3D; 8&quot;</span><br><span class="line">                        ]</span><br><span class="line">                      &#125;),</span><br><span class="line">                    new pxtovw(&#123;</span><br><span class="line">                        unitToConvert: &#39;px&#39;, &#x2F;&#x2F;需要转换的单位，默认为&quot;px&quot;；</span><br><span class="line">                        viewportWidth: 375, &#x2F;&#x2F;设计稿的视口宽度</span><br><span class="line">                        unitPrecision: 5, &#x2F;&#x2F;单位转换后保留的小数位数</span><br><span class="line">                        propList: [&#39;*&#39;], &#x2F;&#x2F;要进行转换的属性列表,*表示匹配所有,!表示不转换</span><br><span class="line">                        viewportUnit: &#39;vw&#39;, &#x2F;&#x2F;转换后的视口单位</span><br><span class="line">                        fontViewportUnit: &#39;vw&#39;, &#x2F;&#x2F;转换后字体使用的视口单位</span><br><span class="line">                        selectorBlackList: [], &#x2F;&#x2F;不进行转换的css选择器，继续使用原有单位</span><br><span class="line">                        minPixelValue: 1, &#x2F;&#x2F;设置最小的转换数值</span><br><span class="line">                        mediaQuery: false, &#x2F;&#x2F;设置媒体查询里的单位是否需要转换单位</span><br><span class="line">                        replace: true, &#x2F;&#x2F;是否直接更换属性值，而不添加备用属性</span><br><span class="line">                        exclude: [&#x2F;node_modules&#x2F;] &#x2F;&#x2F;忽略某些文件夹下的文件</span><br><span class="line">                    &#125;)</span><br><span class="line">                  ]</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        overlay: &#123; &#x2F;&#x2F; 让浏览器 overlay 同时显示警告和错误</span><br><span class="line">            warnings: true,</span><br><span class="line">            errors: true</span><br><span class="line">        &#125;,</span><br><span class="line">        host: &#39;0.0.0.0&#39;,</span><br><span class="line">        port: 8082,</span><br><span class="line">        https: false,&#x2F;&#x2F; https:&#123;type:Boolean&#125;</span><br><span class="line">        open: false, &#x2F;&#x2F;配置自动启动浏览器</span><br><span class="line">        hotOnly: true,&#x2F;&#x2F; 热更新</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><p>  根目录下创建 .env.production(生产) 和 .env.development(开发)<br>    必须以VUE_APP_ 开头<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">VUE_APP_API_ROOT&#x3D;&quot;https:&#x2F;&#x2F;test-xxx.xxx.com.cn&quot;</span><br><span class="line">VUE_APP_ATHENA_API_ROOT&#x3D;&quot;https:&#x2F;&#x2F;xxx.xxx.com.cn&#x2F;&quot;</span><br><span class="line">VUE_APP_ORDER_API_ROOT&#x3D;&quot;https:&#x2F;&#x2F;xxx.xxx.com.cn:8085&#x2F;&quot;</span><br></pre></td></tr></table></figure></p>
+<h1 id="骨架屏-vue-skeleton-webpack-plugin"><a href="#骨架屏-vue-skeleton-webpack-plugin" class="headerlink" title="骨架屏 vue-skeleton-webpack-plugin"></a>骨架屏 vue-skeleton-webpack-plugin</h1><p>  安装<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install vue-skeleton-webpack-plugin</span><br></pre></td></tr></table></figure><br>  骨架屏vue  （例如：src==&gt; skeleton.vue）<br>     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">    &lt;div&gt;骨架屏1&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;&#125;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted () &#123;&#125;,</span><br><span class="line">  methods: &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped lang&#x3D;&quot;less&quot;&gt;</span><br><span class="line">   无作用貌似 写内联</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure><br>  建入口 src =&gt; skeleton.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#39;vue&#39;</span><br><span class="line">&#x2F;&#x2F; 创建的骨架屏 Vue 实例</span><br><span class="line">import skeleton from &#39;.&#x2F;skeleton.vue&#39;;</span><br><span class="line">import skeleton2 from &#39;.&#x2F;skeleton2.vue&#39;;</span><br><span class="line">console.log(skeleton)</span><br><span class="line">export default new Vue(&#123;</span><br><span class="line">    components: &#123;</span><br><span class="line">        skeleton,</span><br><span class="line">        skeleton2</span><br><span class="line">    &#125;,</span><br><span class="line">    template: &#96;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;skeleton id&#x3D;&quot;skeleton&quot; style&#x3D;&quot;display:none;&quot; &#x2F;&gt;</span><br><span class="line">      &lt;skeleton2 id&#x3D;&quot;skeleton2&quot; style&#x3D;&quot;display:none;&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &#96;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p> webpack 配置  vue.config.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">const pxtovw &#x3D; require(&#39;postcss-px-to-viewport&#39;);</span><br><span class="line">const autoprefixer &#x3D; require(&#39;autoprefixer&#39;);</span><br><span class="line">&#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 引入SkeletonWebpackPlugin start&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">const path &#x3D; require(&#39;path&#39;)</span><br><span class="line">const SkeletonWebpackPlugin &#x3D; require(&#39;vue-skeleton-webpack-plugin&#39;)</span><br><span class="line">&#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 引入SkeletonWebpackPlugin end&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    publicPath: process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#39;production&#39; ? &#39;&#x2F;&#39; : &#39;&#x2F;&#39;, &#x2F;&#x2F;配置根目录</span><br><span class="line">    outputDir: &#39;dist&#39;,</span><br><span class="line">    productionSourceMap: false,&#x2F;&#x2F;不需要生产环境的 source map，可以将其设置为 false</span><br><span class="line">    &#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 主要代码 start&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">    configureWebpack: (config)&#x3D;&gt;&#123;</span><br><span class="line">        config.plugins.push(</span><br><span class="line">            new SkeletonWebpackPlugin(&#123;</span><br><span class="line">                webpackConfig: &#123;</span><br><span class="line">                    entry: &#123;</span><br><span class="line">                        app: path.join(__dirname, &quot;.&#x2F;src&#x2F;skeleton.js&quot;)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                minimize: true,</span><br><span class="line">                quiet: true,</span><br><span class="line">                router: &#123;</span><br><span class="line">                    mode: &quot;history&quot;,</span><br><span class="line">                    routes: [</span><br><span class="line">                        &#123; path: &#39;&#x2F;&#39;, skeletonId: &#39;skeleton&#39; &#125;,</span><br><span class="line">                        &#123; path: &#39;&#x2F;about&#39;, skeletonId: &#39;skeleton2&#39; &#125;,</span><br><span class="line">                    ]</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        );</span><br><span class="line">    &#125;, &#x2F;&#x2F;webpack配置</span><br><span class="line">     &#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 主要代码 end&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">    css: &#123;</span><br><span class="line">        loaderOptions: &#123;</span><br><span class="line">            postcss: &#123;</span><br><span class="line">                plugins: [</span><br><span class="line">                    new autoprefixer(&#123;</span><br><span class="line">                        overrideBrowserslist: [</span><br><span class="line">                          &quot;Android 4.1&quot;,</span><br><span class="line">                          &quot;iOS 7.1&quot;,</span><br><span class="line">                          &quot;Chrome &gt; 31&quot;,</span><br><span class="line">                          &quot;ff &gt; 31&quot;,</span><br><span class="line">                          &quot;ie &gt;&#x3D; 8&quot;</span><br><span class="line">                        ]</span><br><span class="line">                      &#125;),</span><br><span class="line">                    new pxtovw(&#123;</span><br><span class="line">                        unitToConvert: &#39;px&#39;, &#x2F;&#x2F;需要转换的单位，默认为&quot;px&quot;；</span><br><span class="line">					    viewportWidth: 375, &#x2F;&#x2F;设计稿的视口宽度</span><br><span class="line">					    unitPrecision: 5, &#x2F;&#x2F;单位转换后保留的小数位数</span><br><span class="line">					    propList: [&#39;*&#39;], &#x2F;&#x2F;要进行转换的属性列表,*表示匹配所有,!表示不转换</span><br><span class="line">					    viewportUnit: &#39;vw&#39;, &#x2F;&#x2F;转换后的视口单位</span><br><span class="line">					    fontViewportUnit: &#39;vw&#39;, &#x2F;&#x2F;转换后字体使用的视口单位</span><br><span class="line">					    selectorBlackList: [], &#x2F;&#x2F;不进行转换的css选择器，继续使用原有单位</span><br><span class="line">					    minPixelValue: 1, &#x2F;&#x2F;设置最小的转换数值</span><br><span class="line">					    mediaQuery: false, &#x2F;&#x2F;设置媒体查询里的单位是否需要转换单位</span><br><span class="line">					    replace: true, &#x2F;&#x2F;是否直接更换属性值，而不添加备用属性</span><br><span class="line">					    exclude: [&#x2F;node_modules&#x2F;] &#x2F;&#x2F;忽略某些文件夹下的文件</span><br><span class="line">                    &#125;)</span><br><span class="line">                  ]</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        overlay: &#123; &#x2F;&#x2F; 让浏览器 overlay 同时显示警告和错误</span><br><span class="line">            warnings: true,</span><br><span class="line">            errors: true</span><br><span class="line">        &#125;,</span><br><span class="line">        host: &#39;0.0.0.0&#39;,</span><br><span class="line">        port: 8082,</span><br><span class="line">        https: false,&#x2F;&#x2F; https:&#123;type:Boolean&#125;</span><br><span class="line">        open: false, &#x2F;&#x2F;配置自动启动浏览器</span><br><span class="line">        hotOnly: true,&#x2F;&#x2F; 热更新</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2021-07-09T05:22:26.097Z" itemprop="dateUpdated">2021-07-09 13:22:26</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://www.jscheng.top">
+            <img src="blog/img/avatar.png" alt="jscheng">
+            jscheng
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="blog/tags/vue/" rel="tag">vue</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/05/28/vue-cli4-X/&title=《vue-cli4.X 建项目》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/05/28/vue-cli4-X/&title=《vue-cli4.X 建项目》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/05/28/vue-cli4-X/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue-cli4.X 建项目》 — jscheng&url=https://www.jscheng.top/2020/05/28/vue-cli4-X/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/05/28/vue-cli4-X/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="blog/2020/06/02/react-init/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">creat-react-app 配置</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="blog/2020/05/20/electron-waiting/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">electron-waiting</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "hgOSdOMMl0QDNQ9A5Dd0BV74-gzGzoHsz",
+            appKey: "6gJhVhXHxUAUmo2qsoqpUFpi",
+            avatar: "mm",
+            placeholder: "请输入",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="blog/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+       <!-- <p>
+            
+            <span>博客内容遵循</span>
+        </p>-->
+    </div>
+    <div class="bottom">
+        <p><span>jscheng &copy; 2020 - 2021</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">鲁ICP备18022674号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/05/28/vue-cli4-X/&title=《vue-cli4.X 建项目》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/05/28/vue-cli4-X/&title=《vue-cli4.X 建项目》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/05/28/vue-cli4-X/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue-cli4.X 建项目》 — jscheng&url=https://www.jscheng.top/2020/05/28/vue-cli4-X/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/05/28/vue-cli4-X/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://www.jscheng.top/2020/05/28/vue-cli4-X/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: 'blog/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '哪去了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'jscheng';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

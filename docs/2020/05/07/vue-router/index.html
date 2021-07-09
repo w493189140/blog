@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?48711b05b1c1178a5b74ec9dcd75c600"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    <meta name="baidu-site-verification" content="d0GGaTdNRH" />
+    
+    
+    
+    
+    <title>vueRouter 设置 | jscheng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <!--<meta name="keywords" content="vue">-->
+    <meta name="keywords" content="vueRouter 设置 | jscheng">
+
+    <meta name="description" content="web前端,jscheng,blog,jscheng的博客，JSCheng">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="vueRouter 设置">
+<meta property="og:url" content="https://www.jscheng.top/2020/05/07/vue-router/index.html">
+<meta property="og:site_name" content="jscheng">
+<meta property="og:description" content="web前端,jscheng,blog,jscheng的博客，JSCheng">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-07T06:28:45.000Z">
+<meta property="article:modified_time" content="2021-07-09T05:22:26.097Z">
+<meta property="article:author" content="jscheng">
+<meta property="article:tag" content="vue">
+<meta name="twitter:card" content="summary">
+
+    
+    <link rel="shortcut icon" href="blog/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <style>
+        .container{
+            /* width: 1200px; */
+        }
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+    <img src="https://jscheng-img.oss-cn-shanghai.aliyuncs.com/logo.png" alt="logo" hidden>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(blog/img/brand.jpg)">
+      <div class="brand">
+        <a href="blog/" class="avatar waves-effect waves-circle waves-light">
+          <img src="blog/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">jscheng</h5>
+          <a href="mailto:wangcheng55555@163.com" title="wangcheng55555@163.com" class="mail">wangcheng55555@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                类别
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="blog/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                about
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vueRouter 设置</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vueRouter 设置</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-05-07T06:28:45.000Z" itemprop="datePublished" class="page-time">
+  2020-05-07
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="blog/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#去掉hash的"><span class="post-toc-number">1.</span> <span class="post-toc-text">去掉hash的#</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#引入全局base-css"><span class="post-toc-number"></span> <span class="post-toc-text">引入全局base.css</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vueX"><span class="post-toc-number"></span> <span class="post-toc-text">vueX</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vueRouter"><span class="post-toc-number"></span> <span class="post-toc-text">vueRouter</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#404页面"><span class="post-toc-number"></span> <span class="post-toc-text">404页面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vueRouter-钩子"><span class="post-toc-number"></span> <span class="post-toc-text">vueRouter 钩子</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#js-改变路由"><span class="post-toc-number"></span> <span class="post-toc-text">js 改变路由</span></a>
+        </nav>
+    </aside>
+
+
+<article id="post-vue-router"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vueRouter 设置</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-05-07 14:28:45" datetime="2020-05-07T06:28:45.000Z"  itemprop="datePublished">2020-05-07</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="blog/categories/%E6%95%99%E7%A8%8B/">教程</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="去掉hash的"><a href="#去掉hash的" class="headerlink" title="去掉hash的#"></a>去掉hash的#</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  hashbang: false,</span><br><span class="line">  mode: &#39;history&#39;,</span><br><span class="line">  routes: []</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>hashbang<br>默认值： true<br>只在 hash 模式下可用<br>当 hashbang 值为 true 时，所有的路径都会被格式化为以 #! 开头。例如 router.go(‘/foo/bar’) 会把浏览器的 URL 设为 example.com/#!/foo/bar 。</p>
+<h2 id="引入全局base-css"><a href="#引入全局base-css" class="headerlink" title="引入全局base.css"></a>引入全局base.css</h2><p>main.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &quot;.&#x2F;assets&#x2F;base.css&quot;</span><br></pre></td></tr></table></figure>
+<p>base.css 放在assets 下</p>
+<h2 id="vueX"><a href="#vueX" class="headerlink" title="vueX"></a>vueX</h2><p>main.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import Vuex from &#39;vuex&#39;</span><br><span class="line">import store from &#39;.&#x2F;vuex&#x2F;store&#39;</span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &#39;#app&#39;,</span><br><span class="line">  router,</span><br><span class="line">  store,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: &#39;&lt;App&#x2F;&gt;&#39;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>新建文件夹vuex  建立store.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;store.js</span><br><span class="line">import Vue from &#39;vue&#39;</span><br><span class="line">import Vuex from &#39;vuex&#39;</span><br><span class="line">Vue.use(Vuex)</span><br><span class="line">const state &#x3D; &#123;</span><br><span class="line">  count:0,</span><br><span class="line">  aaa:0</span><br><span class="line">&#125;</span><br><span class="line">const mutations &#x3D; &#123;</span><br><span class="line">  jia(state)&#123;</span><br><span class="line">    state.count++</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const getters &#x3D; &#123;</span><br><span class="line">  count:() &#x3D;&gt; &#123;</span><br><span class="line">    return state.count +&#x3D; 100</span><br><span class="line">  &#125;,</span><br><span class="line">  aaa: () &#x3D;&gt; &#123;</span><br><span class="line">    return state.aaa +&#x3D; 50</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const actions &#x3D; &#123;</span><br><span class="line">  addAction(context)&#123;</span><br><span class="line">    setTimeout(()&#x3D;&gt;&#123;</span><br><span class="line">      context.commit(&#39;jia&#39;,10)</span><br><span class="line">    &#125;,2000)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">  state,</span><br><span class="line">  mutations,</span><br><span class="line">  getters,</span><br><span class="line">  actions</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>js使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import &#123;mapState,mapMutations,mapGetters,mapActions&#125; from &#39;vuex&#39;</span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &#39;App&#39;,</span><br><span class="line">    data()&#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        mag:&#39;vuex初体验&#39;,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed:&#123;</span><br><span class="line">      ...mapState([&#39;count&#39;,&#39;aaa&#39;]),</span><br><span class="line">      ...mapGetters([&quot;count&quot;]),</span><br><span class="line">      sum:function()&#123;</span><br><span class="line">        return this.count + this.aaa</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">      ...mapMutations([&#39;jia&#39;]),</span><br><span class="line">      ...mapActions([&#39;addAction&#39;])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="vueRouter"><a href="#vueRouter" class="headerlink" title="vueRouter"></a>vueRouter</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#39;vue&#39;</span><br><span class="line">import Router from &#39;vue-router&#39;</span><br><span class="line">&#x2F;&#x2F; import HelloWorld from &#39;@&#x2F;components&#x2F;HelloWorld&#39;</span><br><span class="line">import rank from &#39;..&#x2F;components&#x2F;rank&#39;</span><br><span class="line">import recommend from &#39;..&#x2F;components&#x2F;recommend&#39;</span><br><span class="line">import search from &#39;..&#x2F;components&#x2F;search&#39;</span><br><span class="line">import singer from &#39;..&#x2F;components&#x2F;singer&#39;</span><br><span class="line">import aa from &#39;..&#x2F;components&#x2F;aa&#39;</span><br><span class="line">import bb from &#39;..&#x2F;components&#x2F;bb&#39;</span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line">export default new Router(&#123;</span><br><span class="line">  mode:&#39;history&#39;,</span><br><span class="line">  base:__dirname,</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;&#39;,</span><br><span class="line">      redirect:&#39;&#x2F;recommend&#x2F;aa&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;rank&#39;,</span><br><span class="line">      name: &#39;rank&#39;,</span><br><span class="line">      component: rank</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;recommend&#39;,</span><br><span class="line">      name: &#39;recommend&#39;,</span><br><span class="line">      component: recommend,</span><br><span class="line">      children:[</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">          path:&#39;&#x2F;recommend&#x2F;aa&#39;,</span><br><span class="line">          name:&#39;aa&#39;,</span><br><span class="line">          component:aa</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          path:&#39;&#x2F;recommend&#x2F;bb&#39;,</span><br><span class="line">          name:&#39;bb&#39;,</span><br><span class="line">          component:bb</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;search&#x2F;:a&#x2F;:b&#39;,</span><br><span class="line">      name: &#39;search&#39;,</span><br><span class="line">      component: search</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;singer&#39;,</span><br><span class="line">      name: &#39;singer&#39;,</span><br><span class="line">      component: singer</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;navbar&quot;&gt;</span><br><span class="line">     &lt;router-link :to&#x3D;&quot;&#123;name:&#39;recommend&#39;,params:&#123;romeid:romeId&#125;&#125;&quot; class&#x3D;&quot;recommend&quot;&gt;推荐&lt;&#x2F;router-link&gt;</span><br><span class="line">     &lt;router-link  :to&#x3D;&quot;&#123;path:&#39;&#x2F;singer&#39;,query:&#123;id:123&#125;&#125;&quot; class&#x3D;&quot;singer&quot;&gt;歌手&lt;&#x2F;router-link&gt;</span><br><span class="line">     &lt;router-link   :to&#x3D;&quot;&#123;path:&#39;&#x2F;siranknger&#39;&#125;&quot; class&#x3D;&quot;rank&quot;&gt;排行&lt;&#x2F;router-link&gt;</span><br><span class="line">     &lt;router-link  :to&#x3D;&quot;&#123;path:&#39;&#x2F;search&#x2F;111&#x2F;222&#39;&#125;&quot; class&#x3D;&quot;search&quot;&gt;搜索&lt;&#x2F;router-link&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+
+<pre><code>vueRoter  传参
+query   path + query
+params  name + params
+
+url传参   路由接受  params 参数
+
+
+alias  别名 给路由起个名</code></pre><h2 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h2><p>vueRouter</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">  path: &#39;*&#39;,</span><br><span class="line">  component: page404</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="vueRouter-钩子"><a href="#vueRouter-钩子" class="headerlink" title="vueRouter 钩子"></a>vueRouter 钩子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">      path: &#39;&#x2F;home&#39;,</span><br><span class="line">      name: &#39;home&#39;,</span><br><span class="line">      component: home,</span><br><span class="line">      beforeEnter:(to,from,next) &#x3D;&gt; &#123;</span><br><span class="line">          &#x2F;&#x2F;to 去的路由</span><br><span class="line">          &#x2F;&#x2F;from 现在得路由</span><br><span class="line">          &#x2F;&#x2F; next()继续执行 不加不执行</span><br><span class="line">          &#x2F;&#x2F;next(&#123;path:&#39;&#x2F;aaa&#39;&#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">       beforeLeave:(to,from,next) &#x3D;&gt; &#123;</span><br><span class="line">          &#x2F;&#x2F;to 去的路由</span><br><span class="line">          &#x2F;&#x2F;from 现在得路由</span><br><span class="line">          &#x2F;&#x2F; next()继续执行 不加不执行</span><br><span class="line">          &#x2F;&#x2F;next(&#123;path:&#39;&#x2F;aaa&#39;&#125;)</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="js-改变路由"><a href="#js-改变路由" class="headerlink" title="js 改变路由"></a>js 改变路由</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">router.go(-1)</span><br><span class="line">router.go(1)</span><br><span class="line">router.push(&#39;&#x2F;home&#39;)</span><br><span class="line">router.push(&#123;path:&#39;&#x2F;home&#39;,query:&#123;aa:0&#125;)</span><br><span class="line">router.push(&#123;name:&#39;home&#39;,params:&#123;aa:0&#125;)</span><br><span class="line"></span><br><span class="line">这边不可以改变component 不能设置模板</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2021-07-09T05:22:26.097Z" itemprop="dateUpdated">2021-07-09 13:22:26</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://www.jscheng.top">
+            <img src="blog/img/avatar.png" alt="jscheng">
+            jscheng
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="blog/tags/vue/" rel="tag">vue</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/05/07/vue-router/&title=《vueRouter 设置》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/05/07/vue-router/&title=《vueRouter 设置》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/05/07/vue-router/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vueRouter 设置》 — jscheng&url=https://www.jscheng.top/2020/05/07/vue-router/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/05/07/vue-router/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="blog/2020/05/09/electron-win7-error/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">electron打包应用在win7无法启动解决方案</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="blog/2020/05/07/vue-update/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">vue上线前的工作</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "hgOSdOMMl0QDNQ9A5Dd0BV74-gzGzoHsz",
+            appKey: "6gJhVhXHxUAUmo2qsoqpUFpi",
+            avatar: "mm",
+            placeholder: "请输入",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="blog/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+       <!-- <p>
+            
+            <span>博客内容遵循</span>
+        </p>-->
+    </div>
+    <div class="bottom">
+        <p><span>jscheng &copy; 2020 - 2021</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">鲁ICP备18022674号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.jscheng.top/2020/05/07/vue-router/&title=《vueRouter 设置》 — jscheng&pic=https://www.jscheng.top/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.jscheng.top/2020/05/07/vue-router/&title=《vueRouter 设置》 — jscheng&source=jscheng 的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <!--<li>-->
+        <!--<a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jscheng.top/2020/05/07/vue-router/" data-title=" Facebook">-->
+          <!--<i class="icon icon-facebook"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vueRouter 设置》 — jscheng&url=https://www.jscheng.top/2020/05/07/vue-router/&via=https://www.jscheng.top" data-title=" Twitter">-->
+          <!--<i class="icon icon-twitter"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.jscheng.top/2020/05/07/vue-router/" data-title=" Google+">-->
+          <!--<i class="icon icon-google-plus"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://www.jscheng.top/2020/05/07/vue-router/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: 'blog/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '哪去了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'jscheng';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -6,7 +6,7 @@
 title: jscheng
 subtitle: ''
 description: 'jscheng 的博客'
-keywords: 'jscheng,博客,阳光喔,阳光语文'
+keywords: 'jscheng,博客'
 author: jscheng
 language: zh-CN
 timezone: ''
@@ -14,7 +14,7 @@ timezone: ''
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://www.jscheng.top/ #https://w493189140.gitee.io/blog
-root: /
+root: blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -23,7 +23,7 @@ pretty_urls:
 
 # Directory
 source_dir: source
-public_dir: blog
+public_dir: docs
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
