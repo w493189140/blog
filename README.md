@@ -1,2 +1,7 @@
 # blog
-新建页面 npx hexo new '面试笔记'
+新建页面 npx hexo new 
+```html
+  <div>
+    fdsafasdfdsafs
+  <div> 
+```
